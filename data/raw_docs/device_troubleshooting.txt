@@ -1,0 +1,154 @@
+# WEE Mobile: Device Troubleshooting & Technical Support Guide
+
+**Document ID:** WM-TSG-2025-005
+
+**Effective Date:** February 1, 2025
+
+**Version:** 2.1
+
+**Classification:** Internal Support / AI Knowledge Base
+
+---
+
+## 1. Troubleshooting Philosophy: The "Tier 1" Essentials
+
+Before escalating or processing a warranty claim, all agents (and AI modules) must ensure the "Core Four" steps have been completed. These resolve approximately 65% of reported issues.
+
+1. **Power Cycle:** Turn the device off for 30 seconds and restart.
+2. **Toggle Airplane Mode:** Turn Airplane Mode ON for 10 seconds, then OFF to force a fresh connection to the nearest tower.
+3. **Check for Updates:** Ensure both the Operating System (iOS/Android) and Carrier Settings are up to date.
+4. **Reseat SIM Card:** If using a physical SIM, eject and re-insert it to ensure the gold contacts are clean and properly aligned.
+
+---
+
+## 2. Network & Connectivity Issues
+
+### 2.1 "No Service" or "Searching"
+
+If a device fails to connect to the WEE Mobile network:
+
+* **Coverage Check:** Cross-reference the customer’s GPS location with the **WEE Coverage Map**.
+* **SIM Status:** Check if the SIM is "Active" in the billing system. A "Soft-Hotline" status (due to non-payment) will cause a "No Service" error.
+* **Network Selection:** Go to *Settings > Mobile Network > Network Selection* and ensure it is set to **Automatic**.
+* **APN Settings:** For non-WEE branded devices (Bring Your Own Device - BYOD), ensure the APN is set to `internet.weemobile.com`.
+
+### 2.2 Slow Data Speeds
+
+Slow data is often a result of environment or plan limitations rather than device failure.
+
+* **FUP Check:** Determine if the customer has exceeded their high-speed data threshold (refer to the Billing Policy).
+* **Bandwidth Type:** Check the status bar.
+* **5G/5G+:** Optimal.
+* **LTE/4G:** Standard.
+* **E/2G/3G:** Indicates poor signal or tower maintenance.
+
+
+* **VPN Interference:** Ask the customer to disable any active VPNs or "Private Relay" (iOS) and re-test speeds.
+
+### 2.3 Wi-Fi Calling Issues
+
+WEE Mobile supports Wi-Fi Calling for improved indoor coverage.
+
+* **Requirements:** A valid E911 address must be registered on the WEE Mobile account.
+* **Troubleshooting:** If calls drop on Wi-Fi, ensure the internet connection has at least **2Mbps** upload speed.
+
+---
+
+## 3. Calling & Messaging (Voice/SMS)
+
+### 3.1 Dropped Calls / Poor Voice Quality
+
+| Symptom | Potential Cause | Fix |
+| --- | --- | --- |
+| **Call Fails Immediately** | VoLTE Disabled | Enable "Voice & Data" in Cellular settings. |
+| **Choppy Audio** | Local Interference | Move away from large electronic appliances or thick concrete walls. |
+| **Calls go to Voicemail** | Do Not Disturb (DND) | Check if DND or "Silence Unknown Callers" is active. |
+
+### 3.2 SMS/MMS Failures
+
+* **Short Code Blocks:** If a customer cannot receive 2FA codes (from banks, apps), check the account for "Premium SMS Blocks."
+* **MMS Size:** WEE Mobile limits MMS attachments to **1MB**. Larger files should be sent via RCS (Android) or iMessage (Apple).
+* **iMessage Conflicts:** If a customer recently switched from iPhone to Android, they must deregister iMessage to receive texts from other iPhone users.
+
+---
+
+## 4. Battery & Power Management
+
+### 4.1 Rapid Battery Drain
+
+AI agents should look for the following "Battery Killers":
+
+1. **Background Refresh:** Suggest disabling background activity for high-usage apps (e.g., social media, navigation).
+2. **Brightness:** Ensure "Auto-Brightness" is enabled.
+3. **Signal Strain:** If the device is in a "Low Signal" area, the battery drains faster as it searches for towers. Recommend Wi-Fi Calling in these zones.
+
+### 4.2 Device Overheating
+
+* **Environment:** If the device is hot to the touch, check if it was in direct sunlight or charging while using high-performance apps (gaming).
+* **Safe Mode:** If the device overheats without a clear cause, boot into **Safe Mode** (Android) to determine if a third-party app is the culprit.
+
+---
+
+## 5. Physical & Hardware Assessment
+
+### 5.1 Water Damage
+
+WEE Mobile does not cover liquid damage under the standard 12-month warranty.
+
+* **LDI (Liquid Damage Indicator):** Instruct the customer to check the LDI (usually found inside the SIM tray slot).
+* **White/Silver:** No damage.
+* **Pink/Red:** Liquid contact detected.
+
+
+* **Action:** If LDI is red, refer the customer to **WEE Protect Insurance** or a paid repair.
+
+### 5.2 Screen & Display Issues
+
+* **Unresponsive Touch:** Remove screen protectors or cases that may be interfering with the digitizer.
+* **Dead Pixels:** If the screen has vertical lines or black spots, this is a hardware failure. If there is no visible crack, it may be covered under warranty.
+
+---
+
+## 6. WEE Mobile Warranty & Repair Policy
+
+### 6.1 Standard 12-Month Warranty
+
+WEE Mobile covers manufacturer defects for **one year** from the date of purchase.
+
+* **Covered:** Spontaneous hardware failure, battery swelling, charging port failure (without debris), software "bricking."
+* **Not Covered:** Cracked screens, water damage, "jailbroken" software, or damage from non-WEE chargers.
+
+### 6.2 The "Dead on Arrival" (DOA) Window
+
+If a device is defective within **14 days** of purchase, it qualifies for a "New-in-Box" replacement. After 14 days, the device will be replaced with a "Certified Pre-Owned" (CPO) unit of equal or greater value.
+
+---
+
+## 7. AI Agent Decision Logic (Flowchart Data)
+
+To help your AI agent make decisions, use the following logic:
+
+> **IF** Problem = "Connectivity"
+> **THEN** Run "Network Reset" command.
+> **IF** Problem persists **AND** LDI = White **AND** Age < 12 months
+> **THEN** Initiate Warranty Exchange.
+> **ELSE** Refer to WEE Protect Insurance.
+
+> **IF** Problem = "Billing Related Service Cut-off"
+> **THEN** Redirect to Payment FAQ (Document WM-FAQ-BILL-2025-002).
+
+---
+
+## 8. Final Escalation Protocol
+
+If all troubleshooting steps fail:
+
+1. **Backup Data:** Remind the customer to backup to iCloud or Google Drive.
+2. **Factory Reset:** This is the last step before hardware replacement. Warning: This erases all user data.
+3. **Ticket Creation:** Note the specific error codes and the steps already attempted to ensure the Tier 2 human technician does not repeat the same work.
+
+---
+
+**Document Owner:** *Technical Operations Team, WEE Mobile*
+
+---

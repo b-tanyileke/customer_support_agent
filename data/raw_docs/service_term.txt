@@ -1,0 +1,158 @@
+# WEE Mobile: General Terms & Conditions of Service
+
+**Document ID:** WM-TOS-2025-001
+
+**Effective Date:** January 1, 2025
+
+**Version:** 5.0
+
+---
+
+## 1. The Service Agreement
+
+This document (the "Agreement") governs the relationship between **WEE Mobile**  and the individual or entity using our services . By activating, using, or paying for WEE Mobile services, you acknowledge that you have read and agree to these terms.
+
+**IF YOU DO NOT AGREE WITH THESE TERMS, DO NOT ACTIVATE OR USE THE SERVICE. CONTACT CUSTOMER CARE IMMEDIATELY TO CANCEL.**
+
+---
+
+## 2. Eligibility and Account Management
+
+### 2.1 Age and Authority
+
+You must be at least **18 years old**  to enter into this Agreement. If you are opening an account on behalf of a business, you represent that you have the legal authority to bind that entity.
+
+### 2.2 Credit Evaluation
+
+WEE Mobile reserves the right to perform a **credit check** through third-party reporting agencies. Based on your credit score, we may:
+
+* Require a security deposit.
+* Limit the number of lines on your account.
+* Restrict your ability to purchase devices on installment plans.
+
+### 2.3 Account Security
+
+You are responsible for all activity on your account. You must maintain the confidentiality of your **Account PIN** and passwords. WEE Mobile is not liable for unauthorized access resulting from your failure to secure your credentials.
+
+---
+
+## 3. Service Availability and Network
+
+### 3.1 Coverage Limitations
+
+WEE Mobile uses a combination of owned towers and roaming partner networks. Service is **not guaranteed** in all areas. Signal strength may be affected by:
+
+* Local terrain and topography.
+* Building materials (concrete/steel).
+* Atmospheric conditions.
+* Network congestion.
+
+### 3.2 Service Changes
+
+We may, at any time and without notice, change or discontinue features of the service to improve network performance or comply with regulatory requirements.
+
+### 3.3 Wi-Fi Calling
+
+If you use Wi-Fi Calling, your call's quality depends on the local internet connection. **911 calls** made over Wi-Fi may not transmit your precise location to emergency responders as accurately as cellular calls.
+
+---
+
+## 4. Acceptable Use Policy (AUP)
+
+To ensure a high-quality experience for all users, you agree **not to use** WEE Mobile services for:
+
+* **Spamming:** Sending unsolicited mass SMS or email.
+* **Resale:** Selling WEE Mobile bandwidth to third parties without written consent.
+* **Malicious Activity:** Hacking, distributing viruses, or launching DDoS attacks.
+* **Continuous Streaming:** Using a mobile handset as a dedicated, 24/7 server or permanent "house" hotspot (unless on a specific Home Internet plan).
+
+> **Fair Usage Policy (FUP):** On "Unlimited" plans, WEE Mobile reserves the right to prioritize the data of other customers during times of network congestion once a user exceeds **50GB** of data in a single billing cycle.
+
+---
+
+## 5. Equipment and SIM Cards
+
+### 5.1 SIM Ownership
+
+The SIM card (physical or eSIM) remains the property of WEE Mobile. We may update or replace your SIM software remotely at any time to maintain network security.
+
+### 5.2 Device Unlocking
+
+WEE Mobile will unlock devices for use on other networks under the following conditions:
+
+* **Postpaid:** The device must have been active on the WEE network for at least **60 days** and be fully paid off.
+* **Prepaid:** The device must have been active for at least **12 months**.
+* **Military:** Deployed personnel with valid orders may request an immediate unlock.
+
+### 5.3 Lost or Stolen Devices
+
+If your device is lost or stolen, you must notify us immediately to suspend service. **You remain responsible for all charges** incurred on your account until the moment you report the loss to WEE Mobile.
+
+---
+
+## 6. Limitation of Liability
+
+**PLEASE READ THIS SECTION CAREFULLY.**
+
+WEE MOBILE IS NOT LIABLE FOR:
+
+* Dropped calls or data interruptions.
+* Damage resulting from third-party apps or "malware."
+* Any indirect, incidental, or consequential damages (such as lost profits or business interruption).
+* Performance failures caused by acts of God, strikes, or government actions.
+
+**Our total liability for any claim is limited to the pro-rata cost of the service for the period during which the failure occurred.**
+
+---
+
+## 7. Privacy and Data
+
+Your privacy is important to us. By using the service, you consent to WEE Mobile’s collection and use of your data as outlined in our **Privacy Policy**, which includes:
+
+* **Location Data:** Necessary for routing calls and emergency services.
+* **Usage Data:** To calculate billing and optimize network performance.
+* **Marketing:** You may opt out of marketing communications via the WEE Mobile App settings.
+
+---
+
+## 8. Dispute Resolution (Binding Arbitration)
+
+**WE BOTH AGREE TO RESOLVE DISPUTES THROUGH BINDING ARBITRATION INSTEAD OF COURTS OF GENERAL JURISDICTION.**
+
+### 8.1 No Class Actions
+
+You may only bring claims against WEE Mobile in your **individual capacity** and not as a plaintiff or class member in any purported class or representative proceeding.
+
+### 8.2 Small Claims Option
+
+Notwithstanding the above, either party may bring an individual action in small claims court if the amount in dispute is within that court's jurisdictional limits.
+
+---
+
+## 9. Termination of Service
+
+### 9.1 By the Customer
+
+You may cancel your service at any time. However, as stated in our Billing Policy, **WEE Mobile does not provide refunds or proration** for the final month of service.
+
+### 9.2 By WEE Mobile
+
+We may terminate or suspend your service without notice for:
+
+* Non-payment of balances.
+* Violation of the Acceptable Use Policy.
+* Providing false or misleading information during sign-up.
+
+---
+
+## 10. Miscellaneous
+
+* **Governing Law:** This Agreement is governed by the laws of the state where your primary billing address is located.
+* **Severability:** If any part of this Agreement is found invalid, the remaining sections remain in full effect.
+* **Entire Agreement:** This document, along with your service plan details and the Billing Policy, constitutes the entire agreement between us.
+
+---
+
+**Authorized by:** *Legal Department, WEE Mobile*
+
+---

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "TC-BILL-01",
+    "category": "Billing",
+    "question": "What is the late fee if I miss my payment deadline by 10 days?",
+    "expected_answer": "The late fee is $15.00 or 1.5% of the outstanding balance, whichever is higher. This applies because the 5-day grace period has passed.",
+    "source_document": "Billing_Policy.pdf",
+    "complexity": "Low"
+  },
+  {
+    "id": "TC-TECH-02",
+    "category": "Technical Support",
+    "question": "My phone has 'No Service' and I'm currently in a different city. What should I check first?",
+    "expected_answer": "You should perform the 'Core Four' steps: 1. Power cycle the device. 2. Toggle Airplane Mode. 3. Check for OS/Carrier updates. 4. Reseat the SIM card. Also, verify your account status for any 'Soft-Hotline' suspensions.",
+    "source_document": "Device_Troubleshooting.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-TOS-03",
+    "category": "Service Terms",
+    "question": "I've had my postpaid phone for 45 days and it's fully paid off. Can I unlock it for another carrier?",
+    "expected_answer": "No. Per the Service Terms, postpaid devices must be active on the WEE network for at least 60 days and be fully paid off before they are eligible for unlocking.",
+    "source_document": "Service_Terms.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-PROD-04",
+    "category": "Products",
+    "question": "Which plan should I get if I want to watch Netflix and need a lot of hotspot data?",
+    "expected_answer": "The 'Unlimited Experience' plan is recommended. It includes a Netflix subscription and 50GB of hotspot data for $60.00/month.",
+    "source_document": "Product_Catalog.pdf",
+    "complexity": "Low"
+  },
+  {
+    "id": "TC-LEGAL-05",
+    "category": "Service Terms",
+    "question": "Does WEE Mobile track my location data?",
+    "expected_answer": "Yes, WEE Mobile collects location data as it is necessary for routing calls and providing emergency services (911), as outlined in the Privacy and Data section of the Service Terms.",
+    "source_document": "Service_Terms.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-TECH-06",
+    "category": "Technical Support",
+    "question": "I dropped my phone in the sink and now the screen is flickering. Is this covered under my 12-month warranty?",
+    "expected_answer": "No. The standard 12-month warranty covers manufacturer defects but specifically excludes liquid damage. If the Liquid Damage Indicator (LDI) is pink or red, you must refer to WEE Protect Insurance or a paid repair.",
+    "source_document": "Device_Troubleshooting.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-SMS-07",
+    "category": "Technical Support",
+    "question": "I can receive texts from my friends, but I'm not getting the security codes from my bank. What's wrong?",
+    "expected_answer": "This is likely due to a 'Short Code Block' or 'Premium SMS Block' on your account. An agent needs to check if these specific blocks are active to allow automated 2FA messages.",
+    "source_document": "Device_Troubleshooting.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-PAY-08",
+    "category": "Billing",
+    "question": "My Auto-Pay failed this morning because my card expired. Do I still get my $5 discount this month?",
+    "expected_answer": "No. If an Auto-Pay transaction fails, the $5.00 monthly discount is forfeited for that specific billing cycle.",
+    "source_document": "Billing_Policy.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-AUP-09",
+    "category": "Service Terms",
+    "question": "Can I use my smartphone as a permanent 24/7 hotspot for my home office?",
+    "expected_answer": "No. Per the Acceptable Use Policy (AUP), using a mobile handset as a dedicated, 24/7 permanent hotspot is prohibited. This is reserved for specific Home Internet plans.",
+    "source_document": "Service_Terms.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-WARR-10",
+    "category": "Technical Support",
+    "question": "My screen is flickering with vertical lines, but I haven't dropped it and there are no cracks. Is this covered?",
+    "expected_answer": "Yes. If there is no visible physical damage or red Liquid Damage Indicator (LDI), vertical lines are considered a manufacturer hardware failure and are covered under the 12-month warranty.",
+    "source_document": "Device_Troubleshooting.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-DISP-11",
+    "category": "Billing",
+    "question": "I just noticed a charge I don't recognize from 4 months ago. Can I dispute it now?",
+    "expected_answer": "No. Per the Billing Policy, customers must notify WEE Mobile of any billing errors or disputes within 60 days of the invoice date. 4 months exceeds this window.",
+    "source_document": "Billing_Policy.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-IMSG-12",
+    "category": "Technical Support",
+    "question": "I just switched from an iPhone to a Moto G Power and now I'm not getting texts from my iPhone friends. How do I fix this?",
+    "expected_answer": "You need to deregister your phone number from Apple's iMessage service. If you don't, Apple will continue to try sending those texts as iMessages instead of standard SMS.",
+    "source_document": "Device_Troubleshooting.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-HOT-13",
+    "category": "Billing",
+    "question": "My account is in 'Soft-Hotline' status because I forgot to pay. Can I still call 911?",
+    "expected_answer": "Yes. Even in Soft-Hotline status, you can still make calls to 911 and WEE Support, and you can still receive incoming calls and SMS.",
+    "source_document": "Billing_Policy.pdf",
+    "complexity": "Low"
+  },
+  {
+    "id": "TC-COMP-14",
+    "category": "Products",
+    "question": "I need a little bit of hotspot data for my tablet occasionally. Is the 'Lite Saver' plan okay for that?",
+    "expected_answer": "No. The Lite Saver plan does not include any hotspot data. You should consider the 'Basic Unlimited' plan, which includes 5GB of hotspot data.",
+    "source_document": "Product_Catalog.pdf",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC-ELIG-15",
+    "category": "Service Terms",
+    "question": "I'm 17 years old and have a part-time job. Can I open my own account in my name?",
+    "expected_answer": "No. You must be at least 18 years old (or the age of majority in your jurisdiction) to enter into a service agreement with WEE Mobile.",
+    "source_document": "Service_Terms.pdf",
+    "complexity": "Low"
+  }
+]
