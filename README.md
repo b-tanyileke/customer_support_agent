@@ -41,7 +41,7 @@ Escalation if needed
 ---
 
 ## Project Structure
-
+```test
 ai_support_agent/
 │
 ├── data/
@@ -71,7 +71,7 @@ ai_support_agent/
 │
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Setup Instructions
