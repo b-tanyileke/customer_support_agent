@@ -2,8 +2,7 @@
 
 An enterprise-style AI support agent that answers customer support questions using
 **retrieval-augmented generation (RAG)**, **LLM-based intent classification**, and
-**explicit decision logic**. The system is designed to be safe and modular,
-mirroring real-world AI agent workflows used in customer care systems.
+**explicit decision logic**. 
 
 ---
 
@@ -15,10 +14,12 @@ mirroring real-world AI agent workflows used in customer care systems.
   - Uses sentence-transformer embeddings and FAISS for semantic search
 - **Escalation handling**
   - Automatically defers to a human agent when confidence is low
-- **FastAPI backend**
-  - Clean API interface for integration
-- **Streamlit UI**
-  - Simple chat interface for demos and testing
+- **OpenAI-compatible API**
+  - Exposes the agent via a `/v1/chat/completions` endpoint
+  - Enables seamless integration with Open WebUI and other OpenAI-compatible tools
+- **Multiple interfaces**
+  - Open WebUI for a full-featured chat experience
+  - Streamlit UI for lightweight local demos
 - **Evaluation utilities**
   - Intent accuracy and retrieval sanity checks
 
@@ -28,6 +29,10 @@ mirroring real-world AI agent workflows used in customer care systems.
 
 ```text
 User Query
+   ↓
+(Open WebUI / Streamlit / API Client)
+   ↓
+OpenAI-Compatible FastAPI Endpoint
    ↓
 LLM-Based Intent Classification
    ↓
@@ -105,10 +110,43 @@ python ingest/embed_store.py
 uvicorn api.app:app --reload
 ```
 
-2. Launch the UI
+2. Launch the UI (See steps below for Open WebUI)
 ```bash
 streamlit run ui/streamlit_app.py
 ```
+
+---
+
+### Using Open WebUI
+
+#### Prerequisites
+  - Docker https://www.docker.com/products/docker-desktop/ 
+  - Ollama (with Gemma pulled locally)
+
+#### Run Open WebUI with docker
+  ```bash
+  docker run -d \
+    -p 3000:8080 \
+    -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \
+    --name open-webui \
+    ghcr.io/open-webui/open-webui:main
+  ```
+
+#### Configure Open WebUI
+
+  1. Open http://localhost:3000
+
+  2. Create Admin account on Open WebUI
+
+  3. Go to Admin Panel -> Settings ->  Connections -> OpenAI
+
+      Set:
+
+      API Base URL: http://host.docker.internal:8000/v1
+
+      API Key: any value (not validated)
+
+  4. Save and start chatting
 
 ---
 
@@ -125,10 +163,8 @@ python eval/evaluate.py
 
 - Query rewriting for improved retrieval
 
--  Confidence scoring for responses
+- Confidence scoring for responses
 
 - LLM-based evaluation
-
-- Dockerized deployment
 
 - Persistent conversation memory
