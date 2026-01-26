@@ -45,6 +45,16 @@ Escalation if needed
 
 ---
 
+## Example Conversation
+
+Below is an example interaction with the support agent using **Open WebUI**.
+The agent identifies intent, retrieves relevant billing policy documents, and generates
+a grounded response based solely on retrieved context.
+
+![Open WebUI Conversation Example](data/sample-conversation.png)
+
+---
+
 ## Project Structure
 ```test
 ai_support_agent/
