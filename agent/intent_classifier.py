@@ -1,10 +1,18 @@
 """
-Classifies the user's intent so the agent can know what actions to take
+Intent classifier module that uses a local LLM to classify user queries into predefined intents.
 """
 
-# Import Libraries
-import subprocess
-from agent.prompts import INTENT_CLASSIFIER_PROMPT
+from .prompts import INTENT_CLASSIFIER_PROMPT
+from .llm_client import LLMError, generate
+
+
+VALID_INTENTS = {
+    "billing": "Billing",
+    "technical support": "Technical Support",
+    "products": "Products",
+    "service terms": "Service Terms",
+    "escalate": "Escalate",
+}
 
 
 def classify_intent(query: str) -> str:
@@ -18,18 +26,13 @@ def classify_intent(query: str) -> str:
     """
     prompt = INTENT_CLASSIFIER_PROMPT.format(query=query)
 
-    # Call LLM and get intent
-    result = subprocess.run(
-        ["ollama", "run", "gemma", prompt],
-        capture_output=True,
-        text=True,
-        check=True,
-        encoding="utf-8",      # force UTF-8
-        errors="replace"
-    )
+    try:
+        raw_intent = generate(prompt)
+    except LLMError:
+        return "Escalate"
 
-    intent = result.stdout.strip()
-    return intent
+    normalized = raw_intent.strip().lower()
+    return VALID_INTENTS.get(normalized, "Escalate")
 
 
 # Uncomment this line for rule based intent classification

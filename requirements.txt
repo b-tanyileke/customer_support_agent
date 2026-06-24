@@ -1,9 +1,7 @@
-# Core language
-python>=3.10
-
 # LLM + embeddings
 sentence-transformers>=2.2.2
 faiss-cpu>=1.7.4
+langchain-text-splitters>=0.2.0
 
 # API & UI
 fastapi>=0.110.0

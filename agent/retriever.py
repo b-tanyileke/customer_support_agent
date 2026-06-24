@@ -1,42 +1,81 @@
 """
-Loads the FAISS index and retrieves the most relevant document chunks for a given entry
+Retrieval module that handles vector search for relevant document chunks.
+This module loads the FAISS index and metadata, and provides a function to retrieve
+the top-k relevant chunks for a given query.
 """
 
-# Import necessary libraries
 import json
 from pathlib import Path
+
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
+from config import EMBEDDING_MODEL, INDEX_PATH, METADATA_PATH, RETRIEVAL_TOP_K
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-METADATA_PATH = BASE_DIR / "data/metadata.json" 
-INDEX_PATH = BASE_DIR / "data/support_index.faiss"
 
-# Load embedding model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+class RetrievalError(RuntimeError):
+    """Raised when the vector index or metadata cannot be loaded."""
 
-# Load FAISS index and metadata
-index = faiss.read_index(str(INDEX_PATH))
-metadata = json.loads(METADATA_PATH.read_text())
 
-def retrieve(query: str, top_k:int = 3):
+_model = None
+_index = None
+_metadata = None
+
+
+def _load_metadata(path: Path):
+    if not path.exists():
+        raise RetrievalError(
+            f"Missing metadata file at {path}. Run python ingest/chunk_docs.py "
+            "and python ingest/embed_store.py first."
+        )
+
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _get_resources():
+    global _model, _index, _metadata
+
+    if _model is None:
+        _model = SentenceTransformer(EMBEDDING_MODEL)
+
+    if _index is None:
+        if not INDEX_PATH.exists():
+            raise RetrievalError(
+                f"Missing FAISS index at {INDEX_PATH}. "
+                "Run python ingest/embed_store.py first."
+            )
+        _index = faiss.read_index(str(INDEX_PATH))
+
+    if _metadata is None:
+        _metadata = _load_metadata(METADATA_PATH)
+
+    return _model, _index, _metadata
+
+
+def retrieve(query: str, top_k: int = RETRIEVAL_TOP_K):
     """
-    Retrieve top_k most relevant document chunks for a query.
-    
-    :param query: User question
-    :type query: str
-    :param top_k: Number of chunks to retrieve
-    :type top_k: int
+    Retrieve top_k relevant chunks with source and distance metadata.
     """
+    if not query.strip():
+        return []
 
-    # Convert query to embedding
+    model, index, metadata = _get_resources()
     query_embedding = model.encode([query])
+    distances, indices = index.search(np.array(query_embedding), top_k)
 
-    # Perform similarity search
-    _, indices = index.search(np.array(query_embedding), top_k)
-    # Fetch matching results
-    results = [metadata[i]["text"] for i in indices[0]]
+    results = []
+    for distance, index_id in zip(distances[0], indices[0]):
+        if index_id < 0 or index_id >= len(metadata):
+            continue
+
+        item = metadata[index_id]
+        results.append(
+            {
+                "text": item["text"],
+                "source": item.get("source", "unknown"),
+                "score": float(distance),
+            }
+        )
 
     return results

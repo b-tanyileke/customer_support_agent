@@ -1,180 +1,222 @@
 # Enterprise AI Support Agent (RAG-Based)
 
-An enterprise-style AI support agent that answers customer support questions using
-**retrieval-augmented generation (RAG)**, **LLM-based intent classification**, and
-**explicit decision logic**. 
+An enterprise-style customer support assistant for fictional WEE Mobile support
+documents. It classifies the user's intent, retrieves relevant policy/product
+knowledge from a FAISS vector index, and generates a grounded answer with an
+LLM provider of your choice.
 
----
+The project is intentionally small enough to follow, but includes the pieces a
+manager or technical reviewer expects to see in a serious AI support prototype:
+configuration, API access, UI access, source attribution, escalation behavior,
+and evaluation metrics.
 
 ## Features
 
-- **LLM-based intent classification**
-  - Classifies queries into billing, technical support, service terms, production or escalation.
-- **Retrieval-Augmented Generation (RAG)**
-  - Uses sentence-transformer embeddings and FAISS for semantic search
-- **Escalation handling**
-  - Automatically defers to a human agent when confidence is low
-- **OpenAI-compatible API**
-  - Exposes the agent via a `/v1/chat/completions` endpoint
-  - Enables seamless integration with Open WebUI and other OpenAI-compatible tools
-- **Multiple interfaces**
-  - Open WebUI for a full-featured chat experience
-  - Streamlit UI for lightweight local demos
-- **Evaluation utilities**
-  - Intent accuracy and retrieval sanity checks
+- LLM-based intent classification for Billing, Technical Support, Products,
+  Service Terms, and Escalate.
+- Retrieval-augmented generation using sentence-transformer embeddings and
+  FAISS.
+- Configurable LLM provider: Ollama, OpenAI, or Gemini.
+- OpenAI-compatible `/v1/chat/completions` endpoint for Open WebUI and similar
+  tools.
+- Simple `/query` endpoint for local apps and demos.
+- Streamlit UI with answer metadata and retrieved sources.
+- Evaluation script for intent accuracy and retrieval source hit rate.
 
----
-
-## Architecture Overview
+## Architecture
 
 ```text
-User Query
-   ↓
-(Open WebUI / Streamlit / API Client)
-   ↓
-OpenAI-Compatible FastAPI Endpoint
-   ↓
-LLM-Based Intent Classification
-   ↓
-Vector Retrieval (FAISS)
-   ↓
-Grounded LLM Response (Gemma)
-   ↓
-Escalation if needed
+User query
+  -> Streamlit, Open WebUI, or API client
+  -> FastAPI
+  -> Intent classification
+  -> FAISS retrieval
+  -> Grounded LLM response
+  -> Answer with intent, sources, and escalation status
 ```
-
----
-
-## Example Conversation
-
-Below is an example interaction with the support agent using **Open WebUI**.
-The agent identifies intent, retrieves relevant billing policy documents, and generates
-a grounded response based solely on retrieved context.
-
-![Open WebUI Conversation Example](data/sample-conversation.png)
-
----
 
 ## Project Structure
-```test
+
+```text
 ai_support_agent/
-│
-├── data/
-│   ├── raw_docs/              # Fictional enterprise support documents
-│   ├── chunks.json            # Chunked documents
-│   ├── metadata.json          # Chunk metadata
-│   └── support_index.faiss    # FAISS vector index
-│
-├── ingest/
-│   ├── chunk_docs.py          # Document chunking
-│   └── embed_store.py         # Embedding + vector store creation
-│
-├── agent/
-│   ├── intent_classifier.py   # Intent classifier
-│   ├── retriever.py           # Relevant chunk retriever
-│   ├── prompts.py             # Prompts for LLM
-│   └── support_agent.py       # Query handling
-│
-├── api/
-│   └── app.py                 # FastAPI backend
-│
-├── ui/
-│   └── streamlit_app.py       # Streamlit UI
-│
-├── eval/
-│   └── evaluate.py            # Evaluation scripts
-│
-├── requirements.txt
-└── README.md
+|-- agent/
+|   |-- intent_classifier.py
+|   |-- llm_client.py
+|   |-- prompts.py
+|   |-- retriever.py
+|   `-- support_agent.py
+|-- api/
+|   `-- app.py
+|-- data/
+|   |-- raw_docs/
+|   |-- chunks.json
+|   |-- metadata.json
+|   |-- support_index.faiss
+|   `-- test_questions.json
+|-- eval/
+|   `-- evaluate.py
+|-- ingest/
+|   |-- chunk_docs.py
+|   `-- embed_store.py
+|-- ui/
+|   `-- streamlit_app.py
+|-- config.py
+|-- .env.example
+|-- requirements.txt
+`-- README.md
 ```
----
 
-## Setup Instructions
+## Setup
 
-1. Install dependencies
+Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Install and start Ollama
+Create local configuration:
+
+```bash
+copy .env.example .env
+```
+
+## Model Configuration
+
+### Option 1: Ollama
+
+Install Ollama, then pull a model:
+
 ```bash
 ollama pull gemma
 ```
 
----
+Use this `.env` configuration:
+
+```text
+LLM_PROVIDER=ollama
+LLM_MODEL=gemma
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+```
+
+### Option 2: OpenAI
+
+Use this `.env` configuration:
+
+```text
+LLM_PROVIDER=openai
+LLM_MODEL=gpt-4o-mini
+OPENAI_API_KEY=your_api_key_here
+```
+
+### Option 3: Gemini
+
+Use this `.env` configuration:
+
+```text
+LLM_PROVIDER=gemini
+LLM_MODEL=gemini-1.5-flash
+GEMINI_API_KEY=your_api_key_here
+```
 
 ## Data Preparation
 
-All documents are fictional and created solely for demonstration.
+The repo includes generated chunks and a FAISS index, but you can rebuild them:
+
 ```bash
 python ingest/chunk_docs.py
 python ingest/embed_store.py
 ```
 
----
+## Run the API
 
-## Running the Application
-
-1. Start the API
 ```bash
 uvicorn api.app:app --reload
 ```
 
-2. Launch the UI (See steps below for Open WebUI)
+Health check:
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+Simple query:
+
+```bash
+curl -X POST http://127.0.0.1:8000/query ^
+  -H "Content-Type: application/json" ^
+  -d "{\"question\":\"What happens if my Auto-Pay fails?\"}"
+```
+
+OpenAI-compatible query:
+
+```bash
+curl -X POST http://127.0.0.1:8000/v1/chat/completions ^
+  -H "Content-Type: application/json" ^
+  -d "{\"model\":\"support-agent\",\"messages\":[{\"role\":\"user\",\"content\":\"Can I unlock my phone after 45 days?\"}]}"
+```
+
+## Run the Streamlit UI
+
+In a second terminal:
+
 ```bash
 streamlit run ui/streamlit_app.py
 ```
 
----
+The UI calls the `/query` endpoint and displays the answer, detected intent,
+and retrieved source documents.
 
-### Using Open WebUI
+## Open WebUI
 
-#### Prerequisites
-  - Docker https://www.docker.com/products/docker-desktop/ 
-  - Ollama (with Gemma pulled locally)
+Run Open WebUI with Docker:
 
-#### Run Open WebUI with docker
-  ```bash
-  docker run -d \
-    -p 3000:8080 \
-    -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \
-    --name open-webui \
-    ghcr.io/open-webui/open-webui:main
-  ```
+```bash
+docker run -d ^
+  -p 3000:8080 ^
+  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 ^
+  --name open-webui ^
+  ghcr.io/open-webui/open-webui:main
+```
 
-#### Configure Open WebUI
+Then open `http://localhost:3000` and configure:
 
-  1. Open http://localhost:3000
-
-  2. Create Admin account on Open WebUI
-
-  3. Go to Admin Panel -> Settings ->  Connections -> OpenAI
-
-      Set:
-
-      API Base URL: http://host.docker.internal:8000/v1
-
-      API Key: any value (not validated)
-
-  4. Save and start chatting
-
----
+- API Base URL: `http://host.docker.internal:8000/v1`
+- API Key: any value
+- Model: `support-agent`
 
 ## Evaluation
 
-Run basic evaluation checks:
+Run:
+
 ```bash
 python eval/evaluate.py
 ```
 
----
+The evaluator reports:
 
-## Possible Future Enhancements
+- Intent classification accuracy.
+- Retrieval top-1 source hit rate.
+- Retrieval top-3 source hit rate.
+- Unexpected escalations.
+- Per-question details.
 
-- Query rewriting for improved retrieval
+## Example Conversation
 
-- Confidence scoring for responses
+![Open WebUI Conversation Example](data/sample-conversation.png)
 
-- LLM-based evaluation
+## Notes and Limitations
 
-- Persistent conversation memory
+- The bundled documents are fictional and are intended for demonstration only.
+- The app does not stream responses yet, even though it accepts OpenAI-style
+  request bodies.
+- Retrieval uses a local FAISS index and sentence-transformer embeddings. Re-run
+  ingestion when raw documents change.
+- Provider API calls are intentionally implemented with the Python standard
+  library to keep the project easy to inspect.

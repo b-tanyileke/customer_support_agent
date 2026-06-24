@@ -1,13 +1,15 @@
 """
-OpenAI-compatible API wrapper for the Enterprise AI Support Agent.
+This module provides a FastAPI application that exposes endpoints compatible with OpenAI's API.
+It allows users to query the support agent and receive responses in a format expected by OpenAI clients.
 """
 
 import uuid
 import time
 from typing import List, Dict, Any, Optional
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from agent.support_agent import handle_query
+from config import LLM_MODEL
 
 app = FastAPI(title="Enterprise AI Support Agent (OpenAI Compatible)")
 
@@ -25,6 +27,10 @@ class ChatCompletionRequest(BaseModel):
     max_tokens: int | None = None
 
 
+class QueryRequest(BaseModel):
+    question: str
+
+
 # OpenAI-compatible endpoint
 
 @app.get("/v1/models")
@@ -33,9 +39,26 @@ async def list_models():
     return {
         "object": "list",
         "data": [
-            {"id": "support-agent", "object": "model", "owned_by": "local"}
+            {"id": "support-agent", "object": "model", "owned_by": "local"},
+            {"id": LLM_MODEL, "object": "model", "owned_by": "configured-provider"},
         ]
     }
+
+
+@app.get("/health")
+async def health():
+    """Health check endpoint."""
+    return {"status": "ok", "model": LLM_MODEL}
+
+
+@app.post("/query")
+async def query(request: QueryRequest) -> Dict[str, Any]:
+    """Handle a simple query request."""
+    if not request.question.strip():
+        raise HTTPException(status_code=400, detail="Question cannot be empty.")
+
+    return handle_query(request.question)
+
 
 @app.post("/v1/chat/completions")
 async def chat_completions(request: ChatCompletionRequest) -> Dict[str, Any]:
@@ -52,13 +75,8 @@ async def chat_completions(request: ChatCompletionRequest) -> Dict[str, Any]:
             break
 
     if user_message is None:
-        return {
-            "error": {
-                "message": "No user message provided."
-            }
-        }
+        raise HTTPException(status_code=400, detail="No user message provided.")
 
-    # Call your existing agent
     agent_response = handle_query(user_message)
 
     # Build OpenAI-style response
@@ -72,11 +90,16 @@ async def chat_completions(request: ChatCompletionRequest) -> Dict[str, Any]:
                 "index": 0,
                 "message": {
                     "role": "assistant",
-                    "content": agent_response
+                    "content": agent_response["response"]
                 },
                 "finish_reason": "stop"
             }
-        ]
+        ],
+        "metadata": {
+            "intent": agent_response["intent"],
+            "sources": agent_response["sources"],
+            "escalated": agent_response["escalated"],
+        },
     }
 
     return response

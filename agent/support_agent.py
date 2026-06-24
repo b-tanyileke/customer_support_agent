@@ -1,63 +1,106 @@
 """
-Main agent logic that handles user queries end-to-end
+Support agent module that handles user queries and returns responses.
+This module integrates intent classification, document retrieval, 
+and language model generation to provide answers to user questions.
 """
 
-# Import necessary libraries
-import subprocess
 from agent.intent_classifier import classify_intent
+from agent.llm_client import LLMError, generate
 from agent.prompts import SUPPORT_PROMPT
-from agent.retriever import retrieve
+from agent.retriever import RetrievalError, retrieve
 
 
-def call_gemma(prompt: str) -> str:
+ESCALATION_MESSAGE = (
+    "This issue may require a human support agent. "
+    "Please contact customer support for further assistance."
+)
+
+
+def handle_query(query: str) -> dict:
     """
-    Calls gemma locally via ollama
-    
-    :param prompt: Prompt sent to the LLM
-    :type prompt: str
-    :return: Model response
-    :rtype: str
+    Handle a support query and return the answer plus useful metadata.
     """
+    if not query or not query.strip():
+        return {
+            "response": "Please enter a support question.",
+            "intent": "Escalate",
+            "sources": [],
+            "escalated": True,
+        }
 
-    result = subprocess.run(
-        ["ollama", "run", "gemma", prompt],
-        capture_output=True,
-        text=True,
-        check=True,
-        encoding="utf-8",      # force UTF-8
-        errors="replace"
-    )
-    return result.stdout.strip()
-
-
-def handle_query(query: str) -> str:
-    """
-    Docstring for handle_query
-    
-    :param query: User question
-    :type query: str
-    :return: Agent response
-    :rtype: str
-    """
-
-    # 1. Classify user intent
     intent = classify_intent(query)
 
-    # 2. Escalation handling
-    if intent == "escalate":
-        return( "This issue may require a human support agent. "
-            "Please contact customer support for further assistance."
-            )
+    if intent == "Escalate":
+        return {
+            "response": ESCALATION_MESSAGE,
+            "intent": intent,
+            "sources": [],
+            "escalated": True,
+        }
 
-    # 3. Retrieve relevant documents
-    retrieved_chunks = retrieve(query)
-    context = "\n\n".join(retrieved_chunks)
+    try:
+        retrieved_chunks = retrieve(query)
+    except RetrievalError as exc:
+        return {
+            "response": f"Knowledge base is unavailable: {exc}",
+            "intent": intent,
+            "sources": [],
+            "escalated": True,
+        }
 
-    # 4. Generate grounded response
+    if not retrieved_chunks:
+        return {
+            "response": (
+                "I could not find relevant support documentation for that question. "
+                "Please contact a human support agent."
+            ),
+            "intent": intent,
+            "sources": [],
+            "escalated": True,
+        }
+
+    context = "\n\n".join(
+        f"Source: {chunk['source']}\n{chunk['text']}" for chunk in retrieved_chunks
+    )
+    sources = _dedupe_sources(retrieved_chunks)
+
     prompt = SUPPORT_PROMPT.format(
         context=context,
         question=query
     )
-    response = call_gemma(prompt)
 
-    return response
+    try:
+        response = generate(prompt)
+    except LLMError as exc:
+        return {
+            "response": f"Language model is unavailable: {exc}",
+            "intent": intent,
+            "sources": sources,
+            "escalated": True,
+        }
+
+    return {
+        "response": response,
+        "intent": intent,
+        "sources": sources,
+        "escalated": False,
+    }
+
+
+def answer_query(query: str) -> str:
+    """
+    Compatibility helper for clients that only need the response text.
+    """
+    return handle_query(query)["response"]
+
+
+def _dedupe_sources(chunks: list[dict]) -> list[dict]:
+    seen = set()
+    sources = []
+    for chunk in chunks:
+        source = chunk.get("source", "unknown")
+        if source in seen:
+            continue
+        seen.add(source)
+        sources.append({"source": source, "score": chunk.get("score")})
+    return sources
