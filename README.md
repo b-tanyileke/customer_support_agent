@@ -207,7 +207,11 @@ The evaluator reports:
 - Unexpected escalations.
 - Per-question details.
 
-## Example Conversation
+## Streamlit Demo
+
+![Streamlit Demo](data/support-agent-demo.gif)
+
+## Example Conversation on Open WebUI
 
 ![Open WebUI Conversation Example](data/sample-conversation.png)
 
