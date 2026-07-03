@@ -4,11 +4,10 @@ Streamlit chat UI for the Enterprise AI Support Agent.
 
 from pathlib import Path
 import sys
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
 import requests
 import streamlit as st
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from config import API_URL
 
@@ -94,6 +93,7 @@ st.markdown(
 
 
 def get_api_health() -> tuple[bool, str]:
+    """Check the health of the API."""
     try:
         response = requests.get(f"{API_URL.rstrip('/')}/health", timeout=5)
         response.raise_for_status()
@@ -105,6 +105,7 @@ def get_api_health() -> tuple[bool, str]:
 
 
 def ask_support_agent(question: str) -> dict:
+    """Send a question to the support agent API and return the response."""
     response = requests.post(
         f"{API_URL.rstrip('/')}/query",
         json={"question": question},
@@ -115,10 +116,12 @@ def ask_support_agent(question: str) -> dict:
 
 
 def add_user_message(content: str) -> None:
+    """Add a user message to the session state."""
     st.session_state.messages.append({"role": "user", "content": content})
 
 
 def add_assistant_message(data: dict) -> None:
+    """Add an assistant message to the session state."""
     st.session_state.messages.append(
         {
             "role": "assistant",
@@ -131,6 +134,7 @@ def add_assistant_message(data: dict) -> None:
 
 
 def render_assistant_metadata(message: dict) -> None:
+    """Render the metadata for an assistant message."""
     intent = message.get("intent", "unknown")
     escalated = message.get("escalated", False)
     sources = message.get("sources", [])
@@ -152,7 +156,7 @@ def render_assistant_metadata(message: dict) -> None:
         with st.expander("Sources"):
             for source in sources:
                 score = source.get("score")
-                score_text = f" - distance {score:.2f}" if isinstance(score, float) else ""
+                score_text = f" - similarity {score:.2f}" if isinstance(score, float) else ""
                 st.markdown(
                     f"<p class=\"source-line\">{source.get('source', 'unknown')}{score_text}</p>",
                     unsafe_allow_html=True,
@@ -160,6 +164,7 @@ def render_assistant_metadata(message: dict) -> None:
 
 
 def render_message(message: dict) -> None:
+    """Render a chat message in the Streamlit UI."""
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         if message["role"] == "assistant":

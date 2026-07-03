@@ -1,210 +1,240 @@
 [
   {
-    "text": "# WEE Mobile: Consumer Billing Policy & Terms of Service\n\n**Document ID:** WM-POL-BILL-2025-001\n\n**Effective Date:** January 1, 2025\n\n**Version:** 4.2\n\n---\n\n## 1. Introduction and Purpose",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-000",
+    "text": "# WEE Mobile: Consumer Billing Policy & Terms of Service\n\n**Document ID:** WM-POL-BILL-2025-001\n\n**Effective Date:** January 1, 2025\n\n**Version:** 4.2\n\n---\n\n## 1. Introduction and Purpose\n\nThe purpose of this document is to outline the billing practices, payment requirements, and financial responsibilities of customers subscribed to WEE Mobile services. This policy ensures transparency in how charges are calculated, invoiced, and collected. By subscribing to WEE Mobile services, the customer agrees to the terms set forth in this policy.\n\n## 2. Billing Cycles and Invoicing\n\nWEE Mobile operates on a **monthly recurring billing cycle**.\n\n### 2.1 Cycle Assignment",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 0
   },
   {
-    "text": "---\n\n## 1. Introduction and Purpose\n\nThe purpose of this document is to outline the billing practices, payment requirements, and financial responsibilities of customers subscribed to WEE Mobile services. This policy ensures transparency in how charges are calculated, invoiced, and collected. By subscribing to WEE Mobile services, the customer agrees to the terms set forth in this policy.\n\n## 2. Billing Cycles and Invoicing\n\nWEE Mobile operates on a **monthly recurring billing cycle**.",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-001",
+    "text": "### 2.1 Cycle Assignment\n\nUpon activation, customers are assigned to one of four billing cycles (beginning on the 1st, 8th, 15th, or 22nd of the month). This date remains the customer\u2019s \"Bill Anniversary Date.\"\n\n### 2.2 Invoice Delivery\n\n* **Paperless Billing:** By default, WEE Mobile utilizes electronic invoicing (e-Bill). Notifications are sent via SMS and email.\n* **Paper Invoices:** Customers may request physical paper statements for a monthly administrative fee of **$3.50 per statement**.\n\n### 2.3 Proration\n\nIn the first month of service, or when changing plans mid-cycle, charges are prorated. This means customers are charged only for the days the service was active. Data allowances are also prorated accordingly.\n\n## 3. Payment Terms and Methods",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 1
   },
   {
-    "text": "### 2.1 Cycle Assignment\n\nUpon activation, customers are assigned to one of four billing cycles (beginning on the 1st, 8th, 15th, or 22nd of the month). This date remains the customer\u2019s \"Bill Anniversary Date.\"\n\n### 2.2 Invoice Delivery\n\n* **Paperless Billing:** By default, WEE Mobile utilizes electronic invoicing (e-Bill). Notifications are sent via SMS and email.\n* **Paper Invoices:** Customers may request physical paper statements for a monthly administrative fee of **$3.50 per statement**.",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-002",
+    "text": "## 3. Payment Terms and Methods\n\nAll invoices are due **21 calendar days** from the invoice date (the \"Due Date\").\n\n### 3.1 Accepted Payment Methods\n\nWEE Mobile accepts the following:\n\n* **Credit/Debit Cards:** Visa, MasterCard, American Express, and Discover.\n* **Direct Debit:** ACH transfers from verified checking or savings accounts.\n* **WEE Wallet:** Digital credits applied via the WEE Mobile App.\n* **In-Store Payments:** Cash or card payments at authorized WEE Mobile retail locations.\n\n### 3.2 Auto-Pay Program\n\nCustomers enrolled in Auto-Pay receive a **$5.00 monthly discount** per line. Funds are automatically withdrawn 2 days prior to the Due Date. If an Auto-Pay transaction fails, the discount is forfeited for that billing cycle.\n\n## 4. Late Payments and Penalties",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 2
   },
   {
-    "text": "### 2.3 Proration\n\nIn the first month of service, or when changing plans mid-cycle, charges are prorated. This means customers are charged only for the days the service was active. Data allowances are also prorated accordingly.\n\n## 3. Payment Terms and Methods\n\nAll invoices are due **21 calendar days** from the invoice date (the \"Due Date\").\n\n### 3.1 Accepted Payment Methods\n\nWEE Mobile accepts the following:",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-003",
+    "text": "## 4. Late Payments and Penalties\n\nWEE Mobile provides a **5-day grace period** following the Due Date.\n\n### 4.1 Late Fees\n\nIf payment is not received by the end of the grace period, a late fee of **$15.00 or 1.5% of the outstanding balance** (whichever is higher) will be applied to the subsequent invoice.\n\n### 4.2 Service Suspension (Soft-Hotline)\n\nAccounts more than 30 days past due are subject to \"Soft-Hotline\" status. In this state:\n\n* Outgoing calls (except 911 and WEE Support) and data services are restricted.\n* Incoming calls and SMS remain active.\n* A **$35.00 Reconnection Fee** applies to restore full service.\n\n### 4.3 Collections and Debt Recovery",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 3
   },
   {
-    "text": "WEE Mobile accepts the following:\n\n* **Credit/Debit Cards:** Visa, MasterCard, American Express, and Discover.\n* **Direct Debit:** ACH transfers from verified checking or savings accounts.\n* **WEE Wallet:** Digital credits applied via the WEE Mobile App.\n* **In-Store Payments:** Cash or card payments at authorized WEE Mobile retail locations.\n\n### 3.2 Auto-Pay Program",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-004",
+    "text": "### 4.3 Collections and Debt Recovery\n\nAccounts remaining unpaid for 90 days will be permanently disconnected. The remaining balance, including any equipment installment balances, will be referred to a third-party collection agency.\n\n## 5. Usage-Based Charges and Overages\n\nWhile most WEE Mobile plans include \"Unlimited\" data, specific thresholds apply based on the Fair Usage Policy (FUP).\n\n### 5.1 Data Overages\n\nOn \"Lite\" plans (non-unlimited), data consumed beyond the monthly allotment is charged at **$10.00 per 1GB**. Customers receive SMS alerts at 50%, 80%, and 100% of their data usage.\n\n### 5.2 Premium Services",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 4
   },
   {
-    "text": "### 3.2 Auto-Pay Program\n\nCustomers enrolled in Auto-Pay receive a **$5.00 monthly discount** per line. Funds are automatically withdrawn 2 days prior to the Due Date. If an Auto-Pay transaction fails, the discount is forfeited for that billing cycle.\n\n## 4. Late Payments and Penalties\n\nWEE Mobile provides a **5-day grace period** following the Due Date.\n\n### 4.1 Late Fees",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-005",
+    "text": "### 5.2 Premium Services\n\nCharges for third-party services (e.g., premium SMS contests, app store purchases charged to mobile) will appear in a separate section of the invoice titled \"Third-Party Pass-Through Charges.\"\n\n## 6. International Roaming and Long Distance\n\nCharges for usage outside of the WEE Mobile domestic network are billed in arrears and may appear on the invoice up to two billing cycles after the usage occurred.\n\n### 6.1 Roaming Zones\n\n* **Zone 1 (Canada & Mexico):** Included in \"Global Plus\" plans; otherwise, $5.00/day.\n* **Zone 2 (Europe & Asia):** $10.00/day for the \"TravelPass\" or Pay-As-You-Go rates of $0.25/min and $2.00/MB.\n* **Zone 3 (Rest of World):** Pay-As-You-Go rates only.\n\n### 6.2 International Long Distance (ILD)",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 5
   },
   {
-    "text": "### 4.1 Late Fees\n\nIf payment is not received by the end of the grace period, a late fee of **$15.00 or 1.5% of the outstanding balance** (whichever is higher) will be applied to the subsequent invoice.\n\n### 4.2 Service Suspension (Soft-Hotline)\n\nAccounts more than 30 days past due are subject to \"Soft-Hotline\" status. In this state:",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-006",
+    "text": "### 6.2 International Long Distance (ILD)\n\nCalls made from the domestic network to international destinations are charged per minute unless an ILD Add-on is active.\n\n## 7. Taxes and Regulatory Surcharges\n\nInvoices will include mandatory government taxes and regulatory fees, which vary by the customer\u2019s primary place of use (PPU). These include:\n\n* Federal Universal Service Fund (USF).\n* State and Local Sales Tax.\n* 911 Emergency Service Fee.\n* Regulatory Cost Recovery Fee (a WEE Mobile administrative fee).\n\n## 8. Disputes and Refunds\n\n### 8.1 Dispute Window\n\nCustomers must notify WEE Mobile of any billing errors or disputed charges within **60 days** of the invoice date. Failure to dispute within this window constitutes acceptance of the charges.\n\n### 8.2 Investigation Process",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 6
   },
   {
-    "text": "* Outgoing calls (except 911 and WEE Support) and data services are restricted.\n* Incoming calls and SMS remain active.\n* A **$35.00 Reconnection Fee** applies to restore full service.\n\n### 4.3 Collections and Debt Recovery\n\nAccounts remaining unpaid for 90 days will be permanently disconnected. The remaining balance, including any equipment installment balances, will be referred to a third-party collection agency.\n\n## 5. Usage-Based Charges and Overages",
-    "source": "billing_policy.txt"
+    "id": "billing_policy-007",
+    "text": "### 8.2 Investigation Process\n\nWEE Mobile will investigate disputes within 15 business days. During an active investigation, the customer is not required to pay the disputed portion of the bill, but must pay the undisputed balance to avoid late fees.\n\n### 8.3 Refund Policy\n\nApproved refunds are typically issued as **Bill Credits**. Cash or original-payment-method refunds are only issued in the event of account closure or overpayment of a final bill.\n\n## 9. Account Closure and Final Bill\n\nUpon cancellation, the final bill is issued on the next regular Anniversary Date.",
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 7
   },
   {
-    "text": "## 5. Usage-Based Charges and Overages\n\nWhile most WEE Mobile plans include \"Unlimited\" data, specific thresholds apply based on the Fair Usage Policy (FUP).\n\n### 5.1 Data Overages\n\nOn \"Lite\" plans (non-unlimited), data consumed beyond the monthly allotment is charged at **$10.00 per 1GB**. Customers receive SMS alerts at 50%, 80%, and 100% of their data usage.\n\n### 5.2 Premium Services",
-    "source": "billing_policy.txt"
-  },
-  {
-    "text": "### 5.2 Premium Services\n\nCharges for third-party services (e.g., premium SMS contests, app store purchases charged to mobile) will appear in a separate section of the invoice titled \"Third-Party Pass-Through Charges.\"\n\n## 6. International Roaming and Long Distance\n\nCharges for usage outside of the WEE Mobile domestic network are billed in arrears and may appear on the invoice up to two billing cycles after the usage occurred.\n\n### 6.1 Roaming Zones",
-    "source": "billing_policy.txt"
-  },
-  {
-    "text": "### 6.1 Roaming Zones\n\n* **Zone 1 (Canada & Mexico):** Included in \"Global Plus\" plans; otherwise, $5.00/day.\n* **Zone 2 (Europe & Asia):** $10.00/day for the \"TravelPass\" or Pay-As-You-Go rates of $0.25/min and $2.00/MB.\n* **Zone 3 (Rest of World):** Pay-As-You-Go rates only.\n\n### 6.2 International Long Distance (ILD)\n\nCalls made from the domestic network to international destinations are charged per minute unless an ILD Add-on is active.\n\n## 7. Taxes and Regulatory Surcharges",
-    "source": "billing_policy.txt"
-  },
-  {
-    "text": "## 7. Taxes and Regulatory Surcharges\n\nInvoices will include mandatory government taxes and regulatory fees, which vary by the customer\u2019s primary place of use (PPU). These include:\n\n* Federal Universal Service Fund (USF).\n* State and Local Sales Tax.\n* 911 Emergency Service Fee.\n* Regulatory Cost Recovery Fee (a WEE Mobile administrative fee).\n\n## 8. Disputes and Refunds\n\n### 8.1 Dispute Window",
-    "source": "billing_policy.txt"
-  },
-  {
-    "text": "### 8.1 Dispute Window\n\nCustomers must notify WEE Mobile of any billing errors or disputed charges within **60 days** of the invoice date. Failure to dispute within this window constitutes acceptance of the charges.\n\n### 8.2 Investigation Process\n\nWEE Mobile will investigate disputes within 15 business days. During an active investigation, the customer is not required to pay the disputed portion of the bill, but must pay the undisputed balance to avoid late fees.\n\n### 8.3 Refund Policy",
-    "source": "billing_policy.txt"
-  },
-  {
-    "text": "### 8.3 Refund Policy\n\nApproved refunds are typically issued as **Bill Credits**. Cash or original-payment-method refunds are only issued in the event of account closure or overpayment of a final bill.\n\n## 9. Account Closure and Final Bill\n\nUpon cancellation, the final bill is issued on the next regular Anniversary Date.",
-    "source": "billing_policy.txt"
-  },
-  {
+    "id": "billing_policy-008",
     "text": "* **No Proration on Cancellation:** WEE Mobile does not prorate the final month of service. Customers are encouraged to cancel near the end of their cycle.\n* **Equipment Installment Plans (EIP):** If a customer has an outstanding balance on a device, the full remaining balance becomes due immediately upon account closure.\n\n---\n\n**Authorized by:** *Director of Financial Operations, WEE Mobile*\n\n---",
-    "source": "billing_policy.txt"
+    "source": "billing_policy.txt",
+    "document": "Billing Policy",
+    "chunk_id": 8
   },
   {
+    "id": "device_troubleshooting-000",
     "text": "# WEE Mobile: Device Troubleshooting & Technical Support Guide\n\n**Document ID:** WM-TSG-2025-005\n\n**Effective Date:** February 1, 2025\n\n**Version:** 2.1\n\n**Classification:** Internal Support / AI Knowledge Base\n\n---\n\n## 1. Troubleshooting Philosophy: The \"Tier 1\" Essentials\n\nBefore escalating or processing a warranty claim, all agents (and AI modules) must ensure the \"Core Four\" steps have been completed. These resolve approximately 65% of reported issues.",
-    "source": "device_troubleshooting.txt"
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 0
   },
   {
-    "text": "1. **Power Cycle:** Turn the device off for 30 seconds and restart.\n2. **Toggle Airplane Mode:** Turn Airplane Mode ON for 10 seconds, then OFF to force a fresh connection to the nearest tower.\n3. **Check for Updates:** Ensure both the Operating System (iOS/Android) and Carrier Settings are up to date.\n4. **Reseat SIM Card:** If using a physical SIM, eject and re-insert it to ensure the gold contacts are clean and properly aligned.\n\n---\n\n## 2. Network & Connectivity Issues",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-001",
+    "text": "1. **Power Cycle:** Turn the device off for 30 seconds and restart.\n2. **Toggle Airplane Mode:** Turn Airplane Mode ON for 10 seconds, then OFF to force a fresh connection to the nearest tower.\n3. **Check for Updates:** Ensure both the Operating System (iOS/Android) and Carrier Settings are up to date.\n4. **Reseat SIM Card:** If using a physical SIM, eject and re-insert it to ensure the gold contacts are clean and properly aligned.\n\n---\n\n## 2. Network & Connectivity Issues\n\n### 2.1 \"No Service\" or \"Searching\"\n\nIf a device fails to connect to the WEE Mobile network:",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 1
   },
   {
-    "text": "---\n\n## 2. Network & Connectivity Issues\n\n### 2.1 \"No Service\" or \"Searching\"\n\nIf a device fails to connect to the WEE Mobile network:",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-002",
+    "text": "If a device fails to connect to the WEE Mobile network:\n\n* **Coverage Check:** Cross-reference the customer\u2019s GPS location with the **WEE Coverage Map**.\n* **SIM Status:** Check if the SIM is \"Active\" in the billing system. A \"Soft-Hotline\" status (due to non-payment) will cause a \"No Service\" error.\n* **Network Selection:** Go to *Settings > Mobile Network > Network Selection* and ensure it is set to **Automatic**.\n* **APN Settings:** For non-WEE branded devices (Bring Your Own Device - BYOD), ensure the APN is set to `internet.weemobile.com`.\n\n### 2.2 Slow Data Speeds\n\nSlow data is often a result of environment or plan limitations rather than device failure.",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 2
   },
   {
-    "text": "* **Coverage Check:** Cross-reference the customer\u2019s GPS location with the **WEE Coverage Map**.\n* **SIM Status:** Check if the SIM is \"Active\" in the billing system. A \"Soft-Hotline\" status (due to non-payment) will cause a \"No Service\" error.\n* **Network Selection:** Go to *Settings > Mobile Network > Network Selection* and ensure it is set to **Automatic**.\n* **APN Settings:** For non-WEE branded devices (Bring Your Own Device - BYOD), ensure the APN is set to `internet.weemobile.com`.",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-003",
+    "text": "* **FUP Check:** Determine if the customer has exceeded their high-speed data threshold (refer to the Billing Policy).\n* **Bandwidth Type:** Check the status bar.\n* **5G/5G+:** Optimal.\n* **LTE/4G:** Standard.\n* **E/2G/3G:** Indicates poor signal or tower maintenance.\n\n* **VPN Interference:** Ask the customer to disable any active VPNs or \"Private Relay\" (iOS) and re-test speeds.\n\n### 2.3 Wi-Fi Calling Issues\n\nWEE Mobile supports Wi-Fi Calling for improved indoor coverage.\n\n* **Requirements:** A valid E911 address must be registered on the WEE Mobile account.\n* **Troubleshooting:** If calls drop on Wi-Fi, ensure the internet connection has at least **2Mbps** upload speed.\n\n---\n\n## 3. Calling & Messaging (Voice/SMS)\n\n### 3.1 Dropped Calls / Poor Voice Quality",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 3
   },
   {
-    "text": "### 2.2 Slow Data Speeds\n\nSlow data is often a result of environment or plan limitations rather than device failure.\n\n* **FUP Check:** Determine if the customer has exceeded their high-speed data threshold (refer to the Billing Policy).\n* **Bandwidth Type:** Check the status bar.\n* **5G/5G+:** Optimal.\n* **LTE/4G:** Standard.\n* **E/2G/3G:** Indicates poor signal or tower maintenance.",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-004",
+    "text": "### 3.1 Dropped Calls / Poor Voice Quality\n\n| Symptom | Potential Cause | Fix |\n| --- | --- | --- |\n| **Call Fails Immediately** | VoLTE Disabled | Enable \"Voice & Data\" in Cellular settings. |\n| **Choppy Audio** | Local Interference | Move away from large electronic appliances or thick concrete walls. |\n| **Calls go to Voicemail** | Do Not Disturb (DND) | Check if DND or \"Silence Unknown Callers\" is active. |\n\n### 3.2 SMS/MMS Failures",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 4
   },
   {
-    "text": "* **VPN Interference:** Ask the customer to disable any active VPNs or \"Private Relay\" (iOS) and re-test speeds.\n\n### 2.3 Wi-Fi Calling Issues\n\nWEE Mobile supports Wi-Fi Calling for improved indoor coverage.\n\n* **Requirements:** A valid E911 address must be registered on the WEE Mobile account.\n* **Troubleshooting:** If calls drop on Wi-Fi, ensure the internet connection has at least **2Mbps** upload speed.\n\n---\n\n## 3. Calling & Messaging (Voice/SMS)",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-005",
+    "text": "### 3.2 SMS/MMS Failures\n\n* **Short Code Blocks:** If a customer cannot receive 2FA codes (from banks, apps), check the account for \"Premium SMS Blocks.\"\n* **MMS Size:** WEE Mobile limits MMS attachments to **1MB**. Larger files should be sent via RCS (Android) or iMessage (Apple).\n* **iMessage Conflicts:** If a customer recently switched from iPhone to Android, they must deregister iMessage to receive texts from other iPhone users.\n\n---\n\n## 4. Battery & Power Management\n\n### 4.1 Rapid Battery Drain\n\nAI agents should look for the following \"Battery Killers\":",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 5
   },
   {
-    "text": "---\n\n## 3. Calling & Messaging (Voice/SMS)\n\n### 3.1 Dropped Calls / Poor Voice Quality\n\n| Symptom | Potential Cause | Fix |\n| --- | --- | --- |\n| **Call Fails Immediately** | VoLTE Disabled | Enable \"Voice & Data\" in Cellular settings. |\n| **Choppy Audio** | Local Interference | Move away from large electronic appliances or thick concrete walls. |\n| **Calls go to Voicemail** | Do Not Disturb (DND) | Check if DND or \"Silence Unknown Callers\" is active. |\n\n### 3.2 SMS/MMS Failures",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-006",
+    "text": "AI agents should look for the following \"Battery Killers\":\n\n1. **Background Refresh:** Suggest disabling background activity for high-usage apps (e.g., social media, navigation).\n2. **Brightness:** Ensure \"Auto-Brightness\" is enabled.\n3. **Signal Strain:** If the device is in a \"Low Signal\" area, the battery drains faster as it searches for towers. Recommend Wi-Fi Calling in these zones.\n\n### 4.2 Device Overheating\n\n* **Environment:** If the device is hot to the touch, check if it was in direct sunlight or charging while using high-performance apps (gaming).\n* **Safe Mode:** If the device overheats without a clear cause, boot into **Safe Mode** (Android) to determine if a third-party app is the culprit.\n\n---\n\n## 5. Physical & Hardware Assessment\n\n### 5.1 Water Damage",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 6
   },
   {
-    "text": "### 3.2 SMS/MMS Failures\n\n* **Short Code Blocks:** If a customer cannot receive 2FA codes (from banks, apps), check the account for \"Premium SMS Blocks.\"\n* **MMS Size:** WEE Mobile limits MMS attachments to **1MB**. Larger files should be sent via RCS (Android) or iMessage (Apple).\n* **iMessage Conflicts:** If a customer recently switched from iPhone to Android, they must deregister iMessage to receive texts from other iPhone users.\n\n---\n\n## 4. Battery & Power Management",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-007",
+    "text": "---\n\n## 5. Physical & Hardware Assessment\n\n### 5.1 Water Damage\n\nWEE Mobile does not cover liquid damage under the standard 12-month warranty.\n\n* **LDI (Liquid Damage Indicator):** Instruct the customer to check the LDI (usually found inside the SIM tray slot).\n* **White/Silver:** No damage.\n* **Pink/Red:** Liquid contact detected.\n\n* **Action:** If LDI is red, refer the customer to **WEE Protect Insurance** or a paid repair.\n\n### 5.2 Screen & Display Issues\n\n* **Unresponsive Touch:** Remove screen protectors or cases that may be interfering with the digitizer.\n* **Dead Pixels:** If the screen has vertical lines or black spots, this is a hardware failure. If there is no visible crack, it may be covered under warranty.\n\n---\n\n## 6. WEE Mobile Warranty & Repair Policy",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 7
   },
   {
-    "text": "---\n\n## 4. Battery & Power Management\n\n### 4.1 Rapid Battery Drain\n\nAI agents should look for the following \"Battery Killers\":\n\n1. **Background Refresh:** Suggest disabling background activity for high-usage apps (e.g., social media, navigation).\n2. **Brightness:** Ensure \"Auto-Brightness\" is enabled.\n3. **Signal Strain:** If the device is in a \"Low Signal\" area, the battery drains faster as it searches for towers. Recommend Wi-Fi Calling in these zones.\n\n### 4.2 Device Overheating",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-008",
+    "text": "---\n\n## 6. WEE Mobile Warranty & Repair Policy\n\n### 6.1 Standard 12-Month Warranty\n\nWEE Mobile covers manufacturer defects for **one year** from the date of purchase.\n\n* **Covered:** Spontaneous hardware failure, battery swelling, charging port failure (without debris), software \"bricking.\"\n* **Not Covered:** Cracked screens, water damage, \"jailbroken\" software, or damage from non-WEE chargers.\n\n### 6.2 The \"Dead on Arrival\" (DOA) Window\n\nIf a device is defective within **14 days** of purchase, it qualifies for a \"New-in-Box\" replacement. After 14 days, the device will be replaced with a \"Certified Pre-Owned\" (CPO) unit of equal or greater value.\n\n---\n\n## 7. AI Agent Decision Logic (Flowchart Data)\n\nTo help your AI agent make decisions, use the following logic:",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 8
   },
   {
-    "text": "### 4.2 Device Overheating\n\n* **Environment:** If the device is hot to the touch, check if it was in direct sunlight or charging while using high-performance apps (gaming).\n* **Safe Mode:** If the device overheats without a clear cause, boot into **Safe Mode** (Android) to determine if a third-party app is the culprit.\n\n---\n\n## 5. Physical & Hardware Assessment\n\n### 5.1 Water Damage\n\nWEE Mobile does not cover liquid damage under the standard 12-month warranty.",
-    "source": "device_troubleshooting.txt"
+    "id": "device_troubleshooting-009",
+    "text": "To help your AI agent make decisions, use the following logic:\n\n> **IF** Problem = \"Connectivity\"\n> **THEN** Run \"Network Reset\" command.\n> **IF** Problem persists **AND** LDI = White **AND** Age < 12 months\n> **THEN** Initiate Warranty Exchange.\n> **ELSE** Refer to WEE Protect Insurance.\n\n> **IF** Problem = \"Billing Related Service Cut-off\"\n> **THEN** Redirect to Payment FAQ (Document WM-FAQ-BILL-2025-002).\n\n---\n\n## 8. Final Escalation Protocol\n\nIf all troubleshooting steps fail:",
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 9
   },
   {
-    "text": "* **LDI (Liquid Damage Indicator):** Instruct the customer to check the LDI (usually found inside the SIM tray slot).\n* **White/Silver:** No damage.\n* **Pink/Red:** Liquid contact detected.\n\n\n* **Action:** If LDI is red, refer the customer to **WEE Protect Insurance** or a paid repair.\n\n### 5.2 Screen & Display Issues",
-    "source": "device_troubleshooting.txt"
-  },
-  {
-    "text": "### 5.2 Screen & Display Issues\n\n* **Unresponsive Touch:** Remove screen protectors or cases that may be interfering with the digitizer.\n* **Dead Pixels:** If the screen has vertical lines or black spots, this is a hardware failure. If there is no visible crack, it may be covered under warranty.\n\n---\n\n## 6. WEE Mobile Warranty & Repair Policy\n\n### 6.1 Standard 12-Month Warranty\n\nWEE Mobile covers manufacturer defects for **one year** from the date of purchase.",
-    "source": "device_troubleshooting.txt"
-  },
-  {
-    "text": "* **Covered:** Spontaneous hardware failure, battery swelling, charging port failure (without debris), software \"bricking.\"\n* **Not Covered:** Cracked screens, water damage, \"jailbroken\" software, or damage from non-WEE chargers.\n\n### 6.2 The \"Dead on Arrival\" (DOA) Window\n\nIf a device is defective within **14 days** of purchase, it qualifies for a \"New-in-Box\" replacement. After 14 days, the device will be replaced with a \"Certified Pre-Owned\" (CPO) unit of equal or greater value.\n\n---",
-    "source": "device_troubleshooting.txt"
-  },
-  {
-    "text": "---\n\n## 7. AI Agent Decision Logic (Flowchart Data)\n\nTo help your AI agent make decisions, use the following logic:\n\n> **IF** Problem = \"Connectivity\"\n> **THEN** Run \"Network Reset\" command.\n> **IF** Problem persists **AND** LDI = White **AND** Age < 12 months\n> **THEN** Initiate Warranty Exchange.\n> **ELSE** Refer to WEE Protect Insurance.\n\n> **IF** Problem = \"Billing Related Service Cut-off\"\n> **THEN** Redirect to Payment FAQ (Document WM-FAQ-BILL-2025-002).\n\n---",
-    "source": "device_troubleshooting.txt"
-  },
-  {
+    "id": "device_troubleshooting-010",
     "text": "---\n\n## 8. Final Escalation Protocol\n\nIf all troubleshooting steps fail:\n\n1. **Backup Data:** Remind the customer to backup to iCloud or Google Drive.\n2. **Factory Reset:** This is the last step before hardware replacement. Warning: This erases all user data.\n3. **Ticket Creation:** Note the specific error codes and the steps already attempted to ensure the Tier 2 human technician does not repeat the same work.\n\n---\n\n**Document Owner:** *Technical Operations Team, WEE Mobile*\n\n---",
-    "source": "device_troubleshooting.txt"
+    "source": "device_troubleshooting.txt",
+    "document": "Device Troubleshooting",
+    "chunk_id": 10
   },
   {
-    "text": "Welcome to our current **Product Catalog**. We\u2019ve curated our top **2025 mobile plans** and the latest **5G smartphones** to help you find the perfect fit for your lifestyle and budget.\n\n### **Compare Our Mobile Plans**\n\nWe offer a range of plans designed for everything from basic staying-in-touch to high-bandwidth streaming and international travel.\n\n---",
-    "source": "product_catalog.txt"
+    "id": "product_catalog-000",
+    "text": "Welcome to our current **Product Catalog**. We\u2019ve curated our top **2025 mobile plans** and the latest **5G smartphones** to help you find the perfect fit for your lifestyle and budget.\n\n### **Compare Our Mobile Plans**\n\nWe offer a range of plans designed for everything from basic staying-in-touch to high-bandwidth streaming and international travel.\n\n---\n\n| Plan | Monthly Price | Data | Hotspot | Perks | Best For |\n| --- | --- | --- | --- | --- | --- |\n| Unlimited Experience | $60.00 | Unlimited High-Speed | 50GB Included | Netflix & Apple TV+ | Heavy Streamers |\n| Basic Unlimited | $45.00 | Unlimited (Standard) | 5GB Included | Standard Security | Everyday Use |\n| Lite Saver | $15.00 | 5GB High-Speed | None | Low-Cost Guarantee | Budget Conscious |\n\n### **Featured Smartphones**",
+    "source": "product_catalog.txt",
+    "document": "Product Catalog",
+    "chunk_id": 0
   },
   {
-    "text": "---\n\n                |Unlimited Experience\t|Basic Unlimited\t|Lite Saver\nMonthly Price\t|$60.00                 |$45.00             |$15.00\nData\t        |Unlimited High-Speed   |Unlimited (Standard)|5GB High-Speed\nHotspot\t        |50GB Included          |5GB Included       |None\nPerks\t        |Netflix & Apple TV+    |Standard Security  |Low-Cost Guarantee\nBest For\t    |Heavy Streamers        |Everyday Use       |Budget Conscious\n\n\n### **Featured Smartphones**",
-    "source": "product_catalog.txt"
+    "id": "product_catalog-001",
+    "text": "### **Featured Smartphones**\n\nWhether you want a cutting-edge **AI-powered flagship** or a **reliable budget device**, we have the latest 2025 models ready for you.\n\n#### **Premium Flagships**\n\nThese devices represent the pinnacle of mobile technology, featuring **titanium frames**, advanced **AI photography**, and **foldable displays**.\n\n* The Samsung Galaxy S25 Ultra is the ultimate power-user phone with a **built-in S Pen**, a **200MP camera system**, and the fastest **Snapdragon 8 Elite** processor.\n* The Motorola Razr Ultra 2025 offers a stylish **foldable OLED display** that fits easily in your pocket while providing a massive **7-inch screen** when opened.\n\n#### **Value Essentials**",
+    "source": "product_catalog.txt",
+    "document": "Product Catalog",
+    "chunk_id": 1
   },
   {
-    "text": "### **Featured Smartphones**\n\nWhether you want a cutting-edge **AI-powered flagship** or a **reliable budget device**, we have the latest 2025 models ready for you.\n\n#### **Premium Flagships**\n\nThese devices represent the pinnacle of mobile technology, featuring **titanium frames**, advanced **AI photography**, and **foldable displays**.",
-    "source": "product_catalog.txt"
+    "id": "product_catalog-002",
+    "text": "#### **Value Essentials**\n\nHigh performance doesn't have to come with a high price tag. These models provide **smooth 120Hz displays** and **all-day battery life**.\n\n* The Motorola Moto G Power 2025 is a battery champion with a **5000 mAh capacity** and a large **6.8\" display**, perfect for long days on the go.\n* The Samsung Galaxy A26 5G provides a premium feel with its **Super AMOLED screen** and **IP67 water resistance** at a fraction of flagship costs.\n\n---\n\n### **Recommendation**",
+    "source": "product_catalog.txt",
+    "document": "Product Catalog",
+    "chunk_id": 2
   },
   {
-    "text": "* The Samsung Galaxy S25 Ultra is the ultimate power-user phone with a **built-in S Pen**, a **200MP camera system**, and the fastest **Snapdragon 8 Elite** processor.\n* The Motorola Razr Ultra 2025 offers a stylish **foldable OLED display** that fits easily in your pocket while providing a massive **7-inch screen** when opened.\n\n#### **Value Essentials**\n\nHigh performance doesn't have to come with a high price tag. These models provide **smooth 120Hz displays** and **all-day battery life**.",
-    "source": "product_catalog.txt"
-  },
-  {
-    "text": "* The Motorola Moto G Power 2025 is a battery champion with a **5000 mAh capacity** and a large **6.8\" display**, perfect for long days on the go.\n* The Samsung Galaxy A26 5G provides a premium feel with its **Super AMOLED screen** and **IP67 water resistance** at a fraction of flagship costs.\n\n---\n\n### **Recommendation**",
-    "source": "product_catalog.txt"
-  },
-  {
+    "id": "product_catalog-003",
     "text": "---\n\n### **Recommendation**\n\n* **For the Best Tech:** Choose the Samsung Galaxy S25 Ultra paired with the **Unlimited Experience** plan. You'll get the most powerful hardware and the data to support 8K video and AI tasks.\n* **For Best Value:** The Motorola Moto G Power 2025 on our **Lite Saver** plan is the most cost-effective way to stay connected with modern 5G speeds.",
-    "source": "product_catalog.txt"
+    "source": "product_catalog.txt",
+    "document": "Product Catalog",
+    "chunk_id": 3
   },
   {
-    "text": "# WEE Mobile: General Terms & Conditions of Service\n\n**Document ID:** WM-TOS-2025-001\n\n**Effective Date:** January 1, 2025\n\n**Version:** 5.0\n\n---\n\n## 1. The Service Agreement\n\nThis document (the \"Agreement\") governs the relationship between **WEE Mobile**  and the individual or entity using our services . By activating, using, or paying for WEE Mobile services, you acknowledge that you have read and agree to these terms.",
-    "source": "service_term.txt"
+    "id": "service_term-000",
+    "text": "# WEE Mobile: General Terms & Conditions of Service\n\n**Document ID:** WM-TOS-2025-001\n\n**Effective Date:** January 1, 2025\n\n**Version:** 5.0\n\n---\n\n## 1. The Service Agreement\n\nThis document (the \"Agreement\") governs the relationship between **WEE Mobile** and the individual or entity using our services . By activating, using, or paying for WEE Mobile services, you acknowledge that you have read and agree to these terms.\n\n**IF YOU DO NOT AGREE WITH THESE TERMS, DO NOT ACTIVATE OR USE THE SERVICE. CONTACT CUSTOMER CARE IMMEDIATELY TO CANCEL.**\n\n---\n\n## 2. Eligibility and Account Management\n\n### 2.1 Age and Authority",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 0
   },
   {
-    "text": "**IF YOU DO NOT AGREE WITH THESE TERMS, DO NOT ACTIVATE OR USE THE SERVICE. CONTACT CUSTOMER CARE IMMEDIATELY TO CANCEL.**\n\n---\n\n## 2. Eligibility and Account Management\n\n### 2.1 Age and Authority\n\nYou must be at least **18 years old**  to enter into this Agreement. If you are opening an account on behalf of a business, you represent that you have the legal authority to bind that entity.\n\n### 2.2 Credit Evaluation",
-    "source": "service_term.txt"
+    "id": "service_term-001",
+    "text": "---\n\n## 2. Eligibility and Account Management\n\n### 2.1 Age and Authority\n\nYou must be at least **18 years old** to enter into this Agreement. If you are opening an account on behalf of a business, you represent that you have the legal authority to bind that entity.\n\n### 2.2 Credit Evaluation\n\nWEE Mobile reserves the right to perform a **credit check** through third-party reporting agencies. Based on your credit score, we may:\n\n* Require a security deposit.\n* Limit the number of lines on your account.\n* Restrict your ability to purchase devices on installment plans.\n\n### 2.3 Account Security",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 1
   },
   {
-    "text": "### 2.2 Credit Evaluation\n\nWEE Mobile reserves the right to perform a **credit check** through third-party reporting agencies. Based on your credit score, we may:\n\n* Require a security deposit.\n* Limit the number of lines on your account.\n* Restrict your ability to purchase devices on installment plans.\n\n### 2.3 Account Security",
-    "source": "service_term.txt"
+    "id": "service_term-002",
+    "text": "### 2.3 Account Security\n\nYou are responsible for all activity on your account. You must maintain the confidentiality of your **Account PIN** and passwords. WEE Mobile is not liable for unauthorized access resulting from your failure to secure your credentials.\n\n---\n\n## 3. Service Availability and Network\n\n### 3.1 Coverage Limitations\n\nWEE Mobile uses a combination of owned towers and roaming partner networks. Service is **not guaranteed** in all areas. Signal strength may be affected by:\n\n* Local terrain and topography.\n* Building materials (concrete/steel).\n* Atmospheric conditions.\n* Network congestion.\n\n### 3.2 Service Changes\n\nWe may, at any time and without notice, change or discontinue features of the service to improve network performance or comply with regulatory requirements.",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 2
   },
   {
-    "text": "### 2.3 Account Security\n\nYou are responsible for all activity on your account. You must maintain the confidentiality of your **Account PIN** and passwords. WEE Mobile is not liable for unauthorized access resulting from your failure to secure your credentials.\n\n---\n\n## 3. Service Availability and Network\n\n### 3.1 Coverage Limitations\n\nWEE Mobile uses a combination of owned towers and roaming partner networks. Service is **not guaranteed** in all areas. Signal strength may be affected by:",
-    "source": "service_term.txt"
+    "id": "service_term-003",
+    "text": "### 3.3 Wi-Fi Calling\n\nIf you use Wi-Fi Calling, your call's quality depends on the local internet connection. **911 calls** made over Wi-Fi may not transmit your precise location to emergency responders as accurately as cellular calls.\n\n---\n\n## 4. Acceptable Use Policy (AUP)\n\nTo ensure a high-quality experience for all users, you agree **not to use** WEE Mobile services for:\n\n* **Spamming:** Sending unsolicited mass SMS or email.\n* **Resale:** Selling WEE Mobile bandwidth to third parties without written consent.\n* **Malicious Activity:** Hacking, distributing viruses, or launching DDoS attacks.\n* **Continuous Streaming:** Using a mobile handset as a dedicated, 24/7 server or permanent \"house\" hotspot (unless on a specific Home Internet plan).",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 3
   },
   {
-    "text": "* Local terrain and topography.\n* Building materials (concrete/steel).\n* Atmospheric conditions.\n* Network congestion.\n\n### 3.2 Service Changes\n\nWe may, at any time and without notice, change or discontinue features of the service to improve network performance or comply with regulatory requirements.\n\n### 3.3 Wi-Fi Calling",
-    "source": "service_term.txt"
+    "id": "service_term-004",
+    "text": "> **Fair Usage Policy (FUP):** On \"Unlimited\" plans, WEE Mobile reserves the right to prioritize the data of other customers during times of network congestion once a user exceeds **50GB** of data in a single billing cycle.\n\n---\n\n## 5. Equipment and SIM Cards\n\n### 5.1 SIM Ownership\n\nThe SIM card (physical or eSIM) remains the property of WEE Mobile. We may update or replace your SIM software remotely at any time to maintain network security.\n\n### 5.2 Device Unlocking\n\nWEE Mobile will unlock devices for use on other networks under the following conditions:",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 4
   },
   {
-    "text": "### 3.3 Wi-Fi Calling\n\nIf you use Wi-Fi Calling, your call's quality depends on the local internet connection. **911 calls** made over Wi-Fi may not transmit your precise location to emergency responders as accurately as cellular calls.\n\n---\n\n## 4. Acceptable Use Policy (AUP)\n\nTo ensure a high-quality experience for all users, you agree **not to use** WEE Mobile services for:",
-    "source": "service_term.txt"
+    "id": "service_term-005",
+    "text": "* **Postpaid:** The device must have been active on the WEE network for at least **60 days** and be fully paid off.\n* **Prepaid:** The device must have been active for at least **12 months**.\n* **Military:** Deployed personnel with valid orders may request an immediate unlock.\n\n### 5.3 Lost or Stolen Devices\n\nIf your device is lost or stolen, you must notify us immediately to suspend service. **You remain responsible for all charges** incurred on your account until the moment you report the loss to WEE Mobile.\n\n---\n\n## 6. Limitation of Liability\n\n**PLEASE READ THIS SECTION CAREFULLY.**\n\nWEE MOBILE IS NOT LIABLE FOR:",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 5
   },
   {
-    "text": "* **Spamming:** Sending unsolicited mass SMS or email.\n* **Resale:** Selling WEE Mobile bandwidth to third parties without written consent.\n* **Malicious Activity:** Hacking, distributing viruses, or launching DDoS attacks.\n* **Continuous Streaming:** Using a mobile handset as a dedicated, 24/7 server or permanent \"house\" hotspot (unless on a specific Home Internet plan).",
-    "source": "service_term.txt"
+    "id": "service_term-006",
+    "text": "**PLEASE READ THIS SECTION CAREFULLY.**\n\nWEE MOBILE IS NOT LIABLE FOR:\n\n* Dropped calls or data interruptions.\n* Damage resulting from third-party apps or \"malware.\"\n* Any indirect, incidental, or consequential damages (such as lost profits or business interruption).\n* Performance failures caused by acts of God, strikes, or government actions.\n\n**Our total liability for any claim is limited to the pro-rata cost of the service for the period during which the failure occurred.**\n\n---\n\n## 7. Privacy and Data\n\nYour privacy is important to us. By using the service, you consent to WEE Mobile\u2019s collection and use of your data as outlined in our **Privacy Policy**, which includes:",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 6
   },
   {
-    "text": "> **Fair Usage Policy (FUP):** On \"Unlimited\" plans, WEE Mobile reserves the right to prioritize the data of other customers during times of network congestion once a user exceeds **50GB** of data in a single billing cycle.\n\n---\n\n## 5. Equipment and SIM Cards\n\n### 5.1 SIM Ownership\n\nThe SIM card (physical or eSIM) remains the property of WEE Mobile. We may update or replace your SIM software remotely at any time to maintain network security.\n\n### 5.2 Device Unlocking",
-    "source": "service_term.txt"
+    "id": "service_term-007",
+    "text": "* **Location Data:** Necessary for routing calls and emergency services.\n* **Usage Data:** To calculate billing and optimize network performance.\n* **Marketing:** You may opt out of marketing communications via the WEE Mobile App settings.\n\n---\n\n## 8. Dispute Resolution (Binding Arbitration)\n\n**WE BOTH AGREE TO RESOLVE DISPUTES THROUGH BINDING ARBITRATION INSTEAD OF COURTS OF GENERAL JURISDICTION.**\n\n### 8.1 No Class Actions\n\nYou may only bring claims against WEE Mobile in your **individual capacity** and not as a plaintiff or class member in any purported class or representative proceeding.\n\n### 8.2 Small Claims Option\n\nNotwithstanding the above, either party may bring an individual action in small claims court if the amount in dispute is within that court's jurisdictional limits.\n\n---",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 7
   },
   {
-    "text": "### 5.2 Device Unlocking\n\nWEE Mobile will unlock devices for use on other networks under the following conditions:\n\n* **Postpaid:** The device must have been active on the WEE network for at least **60 days** and be fully paid off.\n* **Prepaid:** The device must have been active for at least **12 months**.\n* **Military:** Deployed personnel with valid orders may request an immediate unlock.\n\n### 5.3 Lost or Stolen Devices",
-    "source": "service_term.txt"
+    "id": "service_term-008",
+    "text": "---\n\n## 9. Termination of Service\n\n### 9.1 By the Customer\n\nYou may cancel your service at any time. However, as stated in our Billing Policy, **WEE Mobile does not provide refunds or proration** for the final month of service.\n\n### 9.2 By WEE Mobile\n\nWe may terminate or suspend your service without notice for:\n\n* Non-payment of balances.\n* Violation of the Acceptable Use Policy.\n* Providing false or misleading information during sign-up.\n\n---\n\n## 10. Miscellaneous",
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 8
   },
   {
-    "text": "### 5.3 Lost or Stolen Devices\n\nIf your device is lost or stolen, you must notify us immediately to suspend service. **You remain responsible for all charges** incurred on your account until the moment you report the loss to WEE Mobile.\n\n---\n\n## 6. Limitation of Liability\n\n**PLEASE READ THIS SECTION CAREFULLY.**\n\nWEE MOBILE IS NOT LIABLE FOR:",
-    "source": "service_term.txt"
-  },
-  {
-    "text": "WEE MOBILE IS NOT LIABLE FOR:\n\n* Dropped calls or data interruptions.\n* Damage resulting from third-party apps or \"malware.\"\n* Any indirect, incidental, or consequential damages (such as lost profits or business interruption).\n* Performance failures caused by acts of God, strikes, or government actions.\n\n**Our total liability for any claim is limited to the pro-rata cost of the service for the period during which the failure occurred.**\n\n---\n\n## 7. Privacy and Data",
-    "source": "service_term.txt"
-  },
-  {
-    "text": "---\n\n## 7. Privacy and Data\n\nYour privacy is important to us. By using the service, you consent to WEE Mobile\u2019s collection and use of your data as outlined in our **Privacy Policy**, which includes:\n\n* **Location Data:** Necessary for routing calls and emergency services.\n* **Usage Data:** To calculate billing and optimize network performance.\n* **Marketing:** You may opt out of marketing communications via the WEE Mobile App settings.\n\n---\n\n## 8. Dispute Resolution (Binding Arbitration)",
-    "source": "service_term.txt"
-  },
-  {
-    "text": "## 8. Dispute Resolution (Binding Arbitration)\n\n**WE BOTH AGREE TO RESOLVE DISPUTES THROUGH BINDING ARBITRATION INSTEAD OF COURTS OF GENERAL JURISDICTION.**\n\n### 8.1 No Class Actions\n\nYou may only bring claims against WEE Mobile in your **individual capacity** and not as a plaintiff or class member in any purported class or representative proceeding.\n\n### 8.2 Small Claims Option",
-    "source": "service_term.txt"
-  },
-  {
-    "text": "### 8.2 Small Claims Option\n\nNotwithstanding the above, either party may bring an individual action in small claims court if the amount in dispute is within that court's jurisdictional limits.\n\n---\n\n## 9. Termination of Service\n\n### 9.1 By the Customer\n\nYou may cancel your service at any time. However, as stated in our Billing Policy, **WEE Mobile does not provide refunds or proration** for the final month of service.\n\n### 9.2 By WEE Mobile",
-    "source": "service_term.txt"
-  },
-  {
-    "text": "### 9.2 By WEE Mobile\n\nWe may terminate or suspend your service without notice for:\n\n* Non-payment of balances.\n* Violation of the Acceptable Use Policy.\n* Providing false or misleading information during sign-up.\n\n---\n\n## 10. Miscellaneous",
-    "source": "service_term.txt"
-  },
-  {
+    "id": "service_term-009",
     "text": "---\n\n## 10. Miscellaneous\n\n* **Governing Law:** This Agreement is governed by the laws of the state where your primary billing address is located.\n* **Severability:** If any part of this Agreement is found invalid, the remaining sections remain in full effect.\n* **Entire Agreement:** This document, along with your service plan details and the Billing Policy, constitutes the entire agreement between us.\n\n---\n\n**Authorized by:** *Legal Department, WEE Mobile*\n\n---",
-    "source": "service_term.txt"
+    "source": "service_term.txt",
+    "document": "Service Term",
+    "chunk_id": 9
   }
 ]

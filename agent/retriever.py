@@ -11,7 +11,13 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from config import EMBEDDING_MODEL, INDEX_PATH, METADATA_PATH, RETRIEVAL_TOP_K
+from config import (
+    EMBEDDING_MODEL,
+    INDEX_PATH,
+    METADATA_PATH,
+    RETRIEVAL_MIN_SCORE,
+    RETRIEVAL_TOP_K,
+)
 
 
 class RetrievalError(RuntimeError):
@@ -61,12 +67,15 @@ def retrieve(query: str, top_k: int = RETRIEVAL_TOP_K):
         return []
 
     model, index, metadata = _get_resources()
-    query_embedding = model.encode([query])
-    distances, indices = index.search(np.array(query_embedding), top_k)
+    query_embedding = model.encode([query], normalize_embeddings=True)
+    query_embedding = np.asarray(query_embedding, dtype="float32")
+    scores, indices = index.search(query_embedding, top_k)
 
     results = []
-    for distance, index_id in zip(distances[0], indices[0]):
+    for score, index_id in zip(scores[0], indices[0]):
         if index_id < 0 or index_id >= len(metadata):
+            continue
+        if score < RETRIEVAL_MIN_SCORE:
             continue
 
         item = metadata[index_id]
@@ -74,7 +83,9 @@ def retrieve(query: str, top_k: int = RETRIEVAL_TOP_K):
             {
                 "text": item["text"],
                 "source": item.get("source", "unknown"),
-                "score": float(distance),
+                "document": item.get("document", "Unknown"),
+                "chunk_id": item.get("chunk_id"),
+                "score": float(score),
             }
         )
 

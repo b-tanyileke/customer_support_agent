@@ -6,19 +6,18 @@ We offer a range of plans designed for everything from basic staying-in-touch to
 
 ---
 
-                |Unlimited Experience	|Basic Unlimited	|Lite Saver
-Monthly Price	|$60.00                 |$45.00             |$15.00
-Data	        |Unlimited High-Speed   |Unlimited (Standard)|5GB High-Speed
-Hotspot	        |50GB Included          |5GB Included       |None
-Perks	        |Netflix & Apple TV+    |Standard Security  |Low-Cost Guarantee
-Best For	    |Heavy Streamers        |Everyday Use       |Budget Conscious
+| Plan | Monthly Price | Data | Hotspot | Perks | Best For |
+| --- | --- | --- | --- | --- | --- |
+| Unlimited Experience | $60.00 | Unlimited High-Speed | 50GB Included | Netflix & Apple TV+ | Heavy Streamers |
+| Basic Unlimited | $45.00 | Unlimited (Standard) | 5GB Included | Standard Security | Everyday Use |
+| Lite Saver | $15.00 | 5GB High-Speed | None | Low-Cost Guarantee | Budget Conscious |
 
 
 ### **Featured Smartphones**
 
 Whether you want a cutting-edge **AI-powered flagship** or a **reliable budget device**, we have the latest 2025 models ready for you.
 
-#### **Premium Flagships**
+#### **Premium Smartphones**
 
 These devices represent the pinnacle of mobile technology, featuring **titanium frames**, advanced **AI photography**, and **foldable displays**.
 

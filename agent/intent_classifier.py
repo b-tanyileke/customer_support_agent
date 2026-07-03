@@ -28,11 +28,29 @@ def classify_intent(query: str) -> str:
 
     try:
         raw_intent = generate(prompt)
-    except LLMError:
-        return "Escalate"
+    except LLMError as exc:
+        return _rule_based_intent(query, error=exc)
 
     normalized = raw_intent.strip().lower()
-    return VALID_INTENTS.get(normalized, "Escalate")
+    return VALID_INTENTS.get(normalized, _rule_based_intent(query))
+
+
+def _rule_based_intent(query: str, error: Exception | None = None) -> str:
+    """
+    Small fallback so demos still behave sensibly if the classifier LLM is unavailable.
+    """
+    q = query.lower()
+    if any(word in q for word in ["bill", "billing", "payment", "charged", "refund", "autopay", "auto-pay", "fee", "dispute"]):
+        return "Billing"
+    if any(word in q for word in ["device", "phone", "signal", "service", "sms", "text", "warranty", "screen", "sim"]):
+        return "Technical Support"
+    if any(word in q for word in ["plan", "product", "netflix", "hotspot", "data", "catalog"]):
+        return "Products"
+    if any(word in q for word in ["terms", "policy", "unlock", "agreement", "privacy", "location", "account"]):
+        return "Service Terms"
+    if error is not None:
+        print(f"Intent classifier LLM unavailable; using fallback. Error: {error}")
+    return "Escalate"
 
 
 # Uncomment this line for rule based intent classification

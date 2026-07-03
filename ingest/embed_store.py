@@ -1,35 +1,38 @@
 """
-Creates embeddings for document chunks and stores them in a FAISS index.
+Store embeddings for the support documents in a FAISS index.
 """
 
-# Import necessary libraries
-from pathlib import Path
 import json
+from pathlib import Path
+import sys
 import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
+from config import CHUNKS_PATH, EMBEDDING_MODEL, INDEX_PATH, METADATA_PATH
 
 
-# Load chunked documents
-BASE_DIR = Path(__file__).resolve().parent.parent
-METADATA_PATH = BASE_DIR / "data/metadata.json" # to save metadata
-CHUNK_PATH = BASE_DIR / "data/chunks.json"
-chunks = json.loads(CHUNK_PATH.read_text())
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+
+chunks = json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))
 texts = [chunk["text"] for chunk in chunks]
 
+if not texts:
+    raise ValueError("No chunks found. Run python ingest/chunk_docs.py first.")
 
-# Load sentence transformer model
-model = SentenceTransformer("all-MiniLM-L6-v2")
-# generate embeddings
-embeddings = model.encode(texts, show_progress_bar=True)
+model = SentenceTransformer(EMBEDDING_MODEL)
+embeddings = model.encode(
+    texts,
+    show_progress_bar=True,
+    normalize_embeddings=True,
+)
+embeddings = np.asarray(embeddings, dtype="float32")
 
-# Create FAISS index
 dimension = embeddings.shape[1]
-index = faiss.IndexFlatL2(dimension)
-index.add(np.array(embeddings))
+index = faiss.IndexFlatIP(dimension)
+index.add(embeddings)
 
-# Save FAISS index and metadata
-faiss.write_index(index, str(BASE_DIR / "data/support_index.faiss"))
-METADATA_PATH.write_text(json.dumps(chunks, indent=2))
+faiss.write_index(index, str(INDEX_PATH))
+METADATA_PATH.write_text(json.dumps(chunks, indent=2), encoding="utf-8")
 
-print(f"Stored {len(texts)} embeddings in FAISS index.")
+print(f"Stored {len(texts)} normalized embeddings in FAISS index.")

@@ -7,21 +7,10 @@ Values can be overridden with environment variables or a local .env file.
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 
 BASE_DIR = Path(__file__).resolve().parent
-
-
-def _load_dotenv(path: Path = BASE_DIR / ".env") -> None:
-    if not path.exists():
-        return
-
-    for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-
-        key, value = line.split("=", 1)
-        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
 def _get_int(name: str, default: int) -> int:
@@ -46,7 +35,7 @@ def _get_float(name: str, default: float) -> float:
         return default
 
 
-_load_dotenv()
+load_dotenv(BASE_DIR / ".env")
 
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama").lower()
 LLM_MODEL = os.getenv("LLM_MODEL", "gemma3:latest")
@@ -64,6 +53,9 @@ GEMINI_BASE_URL = os.getenv(
 
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 RETRIEVAL_TOP_K = _get_int("RETRIEVAL_TOP_K", 3)
+RETRIEVAL_MIN_SCORE = _get_float("RETRIEVAL_MIN_SCORE", -1.0)
+CHUNK_SIZE = _get_int("CHUNK_SIZE", 800)
+CHUNK_OVERLAP = _get_int("CHUNK_OVERLAP", 80)
 
 DATA_DIR = BASE_DIR / "data"
 METADATA_PATH = DATA_DIR / "metadata.json"

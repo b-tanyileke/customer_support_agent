@@ -4,6 +4,11 @@ It measures intent classification accuracy, retrieval accuracy, and unexpected e
 """
 
 import json
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from agent.intent_classifier import classify_intent
 from agent.retriever import retrieve
 

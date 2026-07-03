@@ -8,8 +8,9 @@ import time
 from typing import List, Dict, Any, Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from agent.llm_client import LLMError, generate
 from agent.support_agent import handle_query
-from config import LLM_MODEL
+from config import LLM_MODEL, LLM_PROVIDER, OLLAMA_BASE_URL
 
 app = FastAPI(title="Enterprise AI Support Agent (OpenAI Compatible)")
 
@@ -48,7 +49,28 @@ async def list_models():
 @app.get("/health")
 async def health():
     """Health check endpoint."""
-    return {"status": "ok", "model": LLM_MODEL}
+    return {
+        "status": "ok",
+        "provider": LLM_PROVIDER,
+        "model": LLM_MODEL,
+        "ollama_base_url": OLLAMA_BASE_URL if LLM_PROVIDER == "ollama" else None,
+    }
+
+
+@app.get("/health/llm")
+async def health_llm():
+    """Checks whether the configured LLM provider is reachable."""
+    try:
+        response = generate("Respond with exactly: OK")
+    except LLMError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    return {
+        "status": "ok",
+        "provider": LLM_PROVIDER,
+        "model": LLM_MODEL,
+        "response": response,
+    }
 
 
 @app.post("/query")

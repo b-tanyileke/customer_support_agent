@@ -127,16 +127,7 @@ def _generate_gemini(prompt: str) -> str:
 
 
 def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str] | None = None):
-    request_headers = {"Content-Type": "application/json"}
-    if headers:
-        request_headers.update(headers)
-
-    req = request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers=request_headers,
-        method="POST",
-    )
+    req = _json_request(url, payload, headers)
 
     try:
         with request.urlopen(req, timeout=90) as response:
@@ -146,3 +137,20 @@ def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str] | None
         raise LLMError(f"LLM provider returned HTTP {exc.code}: {detail}") from exc
     except error.URLError as exc:
         raise LLMError(f"Could not reach LLM provider at {url}: {exc.reason}") from exc
+
+
+def _json_request(
+    url: str,
+    payload: dict[str, Any],
+    headers: dict[str, str] | None = None,
+):
+    request_headers = {"Content-Type": "application/json"}
+    if headers:
+        request_headers.update(headers)
+
+    return request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers=request_headers,
+        method="POST",
+    )

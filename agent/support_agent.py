@@ -28,6 +28,17 @@ def handle_query(query: str) -> dict:
             "escalated": True,
         }
 
+    if _is_greeting(query):
+        return {
+            "response": (
+                "Hi, I am the WEE Mobile support assistant. Ask me about billing, "
+                "device troubleshooting, service terms, or product plans."
+            ),
+            "intent": "Greeting",
+            "sources": [],
+            "escalated": False,
+        }
+
     intent = classify_intent(query)
 
     if intent == "Escalate":
@@ -62,12 +73,12 @@ def handle_query(query: str) -> dict:
     context = "\n\n".join(
         f"Source: {chunk['source']}\n{chunk['text']}" for chunk in retrieved_chunks
     )
-    sources = _dedupe_sources(retrieved_chunks)
-
     prompt = SUPPORT_PROMPT.format(
         context=context,
-        question=query
+        question=query,
     )
+
+    sources = _dedupe_sources(retrieved_chunks)
 
     try:
         response = generate(prompt)
@@ -104,3 +115,8 @@ def _dedupe_sources(chunks: list[dict]) -> list[dict]:
         seen.add(source)
         sources.append({"source": source, "score": chunk.get("score")})
     return sources
+
+
+def _is_greeting(query: str) -> bool:
+    normalized = query.strip().lower().strip("!.?")
+    return normalized in {"hi", "hello", "hey", "good morning", "good afternoon", "good evening"}
